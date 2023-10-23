@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+    <style>
+        input:invalid {
+            background-color: white;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Iniciar sesión</h1>
+    <form action="ejercicio4.html" method="post">
+
+        <input type="radio" id="sr" name="genero" aria-label="sr" title="sr" autofocus><label for="sr">Sr.</label>
+        <input type="radio" id="sra" name="genero" aria-label="sra" title="sra"><label for="sra">Sra.</label>
+        <input type="text" id="nombre" name="nombre" aria-label="Nombre" placeholder="Nombre" title="Indice Nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+        <input type="text" id="apellidos" name="apellidos" aria-label="Apellidos" required placeholder="Apellidos" title="Indice Apellidos" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}">
+        <input type="email" id="email" name="email" aria-label="Email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required placeholder="Email" title="Indice Email">
+        <input type="password" id="password" name="password" aria-label="Password" pattern="[A-Za-z0-9!?-]{8,12}" required placeholder="Contraseña" title="Indice Contraseña">
+        
+        
+        <label>FECHA DE NACIMIENTO</label>
+        <select name="Dia" aria-label="Dia">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        
+        <select name="Mes" aria-label="Mes">
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+        </select>
+
+        <select name="Anio" aria-label="Anio">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+        </select>
+        
+        <input type="text" id="dni" name="dni" aria-label="dni" required placeholder="DNI/NIF/NIE" title="Introduzca DNI" pattern="[0-9]{8}[A-Za-z]{1}">
+
+        <input type="text" id="direccion" name="direccion" aria-label="Direccion" required placeholder="Direccion" title="Indice Direccion">
+        <input type="text" id="codigopostal" name="codigopostal" aria-label="Codigopostal" required placeholder="Codigo postal" title="Indice Codigo postal">
+        <input type="text" id="ciudad" name="ciudad" aria-label="Ciudad" required placeholder="Ciudad" title="Indice Ciudad">
+
+
+        <select name="pais" aria-label="pais">
+            <option value="España" selected>España</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Francia">Francia</option>
+        </select>
+          
+        <select name="provincia" aria-label="provincia">
+            <option value="provincia1">provincia1</option>
+            <option value="provincia2">provincia2</option>
+            <option value="provincia3">provincia3</option>
+        </select>
+
+        <input type="text" id="informacion" name="informacion" aria-label="Informacion adicional" required placeholder="Informacion adicional" title="Indice informacion adicional">
+
+        <input type="text" id="telefono" name="telefono" aria-label="Telefono Movil" required placeholder="Telefono movil" title="Indice telefono movil" pattern="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}">
+
+        <input type="checkbox" id="aceptar" value="aceptar"><label>Estos datos personales se utilizaran para responder a sus busquedads, procesar sus pedidos o autorizar el acceso</label>
+
+        <input type="submit" value="Registrarse">
+      
+       
+    </form>
+
+</body>
+
+</html>
