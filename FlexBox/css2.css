@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo para el menú de móvil */
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: deepskyblue;
+}
+
+.navigation li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid lightblue;
+    
+}
+
+.navigation a {
+    display: flex;
+    padding: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    justify-content: center;
+}
+
+@media (min-width: 800px) {
+    .navigation {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .navigation {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .navigation a {
+
+        display: block;
+     
+        
+    }
+    
+}

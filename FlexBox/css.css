@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #686868;
+    font-family: Arial,Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1,25rem;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+ul.menu{
+    display: flex;
+    flex-direction: row;
+    background-color: #ACACAC;
+    border: 1px solid #FFF;
+}
+ul.menu>li{
+
+    background-color: #C9830A;
+    margin: 0.62rem;
+    border: 1 px solid #FFF;
+    padding: 0.62rem;
+    
+}

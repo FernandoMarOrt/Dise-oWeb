@@ -1,0 +1,112 @@
+/* Todo el documento */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+  }
+  
+  /* Cabecera y pie */
+  header, footer {
+    background-color: #e6e7e8;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+  }
+ 
+  /* Logotipo en la cabecera */
+  header img#logo {
+    width: 5rem;
+    height: 4.35rem;
+  }
+  
+  /* Etiquetas de título */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+    color: #00acdd;
+  }
+  
+  /* Título h1 en la cabecera */
+  header h1 {
+    color: #004166;
+    font-weight: bold;
+  }
+  
+  /* Span dentro del título h1 en la cabecera */
+  header h1 span#subject {
+    color: #96bc33;
+  }
+
+  /* Menús */
+  nav ul li {
+    list-style-type: none;
+  }
+
+  /* Enlaces */
+  a:link {
+    text-decoration: none;
+    color: #00acdd;
+  }
+  
+  a:visited {
+    color: #ea2126;
+  }
+  
+  a:hover {
+    cursor: pointer;
+    color: #f58a1e;
+  }
+  
+
+  
+  /* Menú principal */
+  #main-menu {
+    background-color: #004166;
+    font-weight: bold;
+    border: 2px solid #e6e7e8;
+    border-radius: 5px;
+  }
+  
+  /* Sección principal */
+  main section#principal {
+    border: 2px solid #004166;
+    border-radius: 5px;
+  }
+  
+  /* Título h2 en la sección principal */
+  main section#principal h2 {
+    text-align: center;
+  }
+  
+  /* Clase news-art para artículos */
+  .news-art {
+    border: 5px solid #e6e7e8;
+    border-radius: 10px;
+    width: 50%;
+  }
+  
+  /* Imagen en los artículos */
+  main section#principal .news-art img {
+    width: 30%;
+    height: auto;
+  }
+  
+  /* Párrafo en los artículos */
+  main section#principal .news-art p {
+    width: 70%;
+    height: auto;
+    text-align: justify;
+    
+  }
+  
+  /* Primer artículo destacado */
+  main section article:nth-child(2) {
+    background-color: #e6e7e8;
+    border: 2px solid #f58a1e;
+  }
+
+   
+  /* Pie */
+  footer {
+    color: #3f3f3f;
+    height: 2rem;
+  }
