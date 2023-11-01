@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body form {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 20%;
+}
+
+body form a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 1em;
+    padding-left: 8px;
+}
+
+body form input {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    margin-top: 1em;
+    padding: 0 0 10px 15px;
+}
+
+body form input::placeholder {
+    color: black;
+    
+}
+
+body form button {
+    margin-top: 1em;
+    color: burlywood;
+    background-color: rgb(54, 54, 54);
+    border-radius: 20em;
+    height: 4em;
+    width: 12em;
+}

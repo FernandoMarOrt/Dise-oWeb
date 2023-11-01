@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="STYLESHEET" type="text/css" href="login.css"> 
+</head>
+
+
+<body>
+
+    <h1>Iniciar sesión</h1>
+    <form action="login.html" method="post">
+
+        <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required placeholder="Email" title="Email">
+        <input type="password" id="password" name="password" pattern="[A-Za-z0-9!?-]{8,12}"  placeholder="Contraseña" title="Contraseña" required>
+        <a href="#">Recuperar contraseña</a>
+        <button type="submit">Iniciar sesión</button>
+      
+    </form>
+
+</body>
+
+</html>
