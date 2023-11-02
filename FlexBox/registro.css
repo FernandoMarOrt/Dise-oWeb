@@ -51,14 +51,14 @@ body form button {
     width: 10%;
 }
 
-/* Estilo para los elementos select */
+
 select {
-    width: 10%; /* Establece un ancho adecuado según el contenido */
+    width: 10%; 
     display: flex;
     flex-direction: row;
   }
   
-  /* Estilo para los elementos option */
+  
 option {
     display: flex;
     flex-direction: row;
