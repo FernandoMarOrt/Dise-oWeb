@@ -9,6 +9,20 @@ body form {
     width: 20%;
 }
 
+#genero{
+    margin-left: 0.5em;
+}
+
+#genero label{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#genero input{
+    font-size: 10px;
+    height: 12px;
+    width: 12px;
+}
 body form a {
     text-decoration: none;
     color: black;
@@ -24,10 +38,6 @@ body form input,select,option {
     padding: 0 0 10px 15px;
 }
 
-body form input::placeholder {
-    text-shadow: none; /* Esto cambia el color del placeholder a negro */
-    
-}
 
 body form button {
     margin-top: 1em;
@@ -36,31 +46,47 @@ body form button {
     border-radius: 20em;
     height: 4em;
     width: 12em;
+    margin-left: -10px;
 }
 
-#sr,#sra{
-    display: block;
-    flex-direction: row;
-    border: 1px solid black;
-}
-#lsr,#lsra{
+#nacimiento{
+    font-size: 11px;
     font-weight: bold;
-    font-size: 12px;
-    margin-left: 5%;
-    border: 1px solid black;
-    width: 10%;
+    margin-top: 1em;
+    margin-left: 1em;
 }
 
+#info{
 
-select {
-    width: 10%; 
-    display: flex;
-    flex-direction: row;
-  }
-  
-  
-option {
-    display: flex;
-    flex-direction: row;
-  }
-  
+    margin-top: 1em;
+    margin-left: 0.7em;
+    color: rgb(68, 68, 68);
+}
+
+#texto{
+    font-size: 13px;
+}
+
+#suscribirse{
+    margin-top: 1em;
+    border-left: 2px solid lightgray;
+    padding-left: 10px;
+    margin-left: -15px;
+}
+
+#selectNaci{
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+#selectNaci select{
+    width: 28%;
+    margin-right: 2%;
+    margin-left: 2%;
+    background-color: white;
+}
+
+#provincia,#pais{
+    background-color: white;
+    color: gray;
+}
