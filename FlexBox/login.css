@@ -6,7 +6,6 @@ body form {
     display: flex;
     flex-direction: column;
     margin: 10px;
-    width: 20%;
 }
 
 body form a {
@@ -22,6 +21,7 @@ body form input {
     border-bottom: 1px solid lightgray;
     margin-top: 1em;
     padding: 0 0 10px 15px;
+    width: 25em;
 }
 
 body form input::placeholder {
@@ -36,4 +36,10 @@ body form button {
     border-radius: 20em;
     height: 4em;
     width: 12em;
+}
+
+@media (min-width: 800px) {
+    body form {
+        align-items: center;
+    }
 }

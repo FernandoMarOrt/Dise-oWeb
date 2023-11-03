@@ -13,7 +13,7 @@
 }
 
 .navigation li {
-    width: 100%;
+   
     text-align: center;
     border-top: 1px solid lightblue;
     
@@ -35,16 +35,15 @@
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
     .navigation {
-        flex-direction: row;
         justify-content: flex-end;
     }
-    .navigation a {
 
-        display: block;
-     
-        
+    .navigation li{
+
+        width: 7%;
+ 
     }
     
 }
