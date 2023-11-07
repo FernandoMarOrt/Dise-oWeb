@@ -43,14 +43,11 @@ body {
     flex-wrap: wrap;
   }
   aside {
-    width: 50%;
+    flex-basis: 50%;
+   
   }
-  .cabecera{
-    width: 100%;
-  }
-
-  .pie{
-    width: 100%;
+  .pie,.cabecera{
+    flex-basis: 100%;
   }
 
 
@@ -59,24 +56,28 @@ body {
 @media (min-width: 1024px) {
 
   .articuloP {
-    flex: 3 0px;
+    order:3;
+    flex-basis: 50%;
+  }
+
+  aside {
+    flex-basis: 25%;
+  }
+
+  .cabecera{
+    order:1;
+    flex-basis: 100%;
   }
 
   .aside1 {
-    order: 1;
-    width: 25%;
-  }
-
-  .articuloP {
     order: 2;
   }
   .aside2 {
-    order: 3;
-    width: 25%;
+    order: 4;
   }
 
   .pie {
-    order: 4;
+    order: 5;
   }
 
 }

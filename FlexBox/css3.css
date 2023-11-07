@@ -21,8 +21,8 @@ main {
     flex-direction: column;
 }
 
-article, nav, aside, footer {
-    margin-top: 5px;
+article, nav, aside, footer , header {
+    margin: 3px;
 }
 
 nav, aside, footer, header {
@@ -55,15 +55,13 @@ footer {
 
 @media (min-width:768px){
     article{
-        width: 48%;
-            margin-left: 1%;
-            margin-right: 1%;
+        flex-grow: 4;
     }
     main {
         flex-direction: row;
     }
 
-    nav, aside {
-        width: 25%;
+    aside,nav {
+        flex-grow: 1;
     }
 }
