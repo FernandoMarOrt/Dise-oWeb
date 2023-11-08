@@ -55,7 +55,7 @@ body {
 
 @media (min-width: 1024px) {
 
-  .articuloP {
+   .articuloP {
     order:3;
     flex-basis: 50%;
   }
