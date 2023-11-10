@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Queens Park';
+    font-style: normal;
+    font-weight: 400;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+article p {
+    font-family: 'Merriweather';
+    line-height: 1.6;
+}
+
+section >h2 {
+    font-family: serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+article h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+article h4,h5 {
+    text-align: right; 
+      
+}
+
+article h4{
+    margin-top: 0.2rem;
+}
+
+article h5{
+    margin-top: -1rem;
+}
+
+@media (min-width: 840px){
+
+    section{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .breaking{
+        flex-grow: 1;
+    }
+
+    section >h2 {
+        flex: 100%;
+        font-size: 4rem;
+    
+    }
+
+    article{
+        flex-basis: 25%;
+        margin: 1rem;
+    }
+
+
+}
