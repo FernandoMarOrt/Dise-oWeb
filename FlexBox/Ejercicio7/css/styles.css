@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#principal {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+header,
+footer {
+  background-color: #e6e7e8;
+  border: 2px solid #3f3f3f;
+  border-radius: 5px;
+}
+
+footer {
+  color: #3f3f3f;
+  height: 2rem;
+}
+
+header img#logo {
+  width: 5rem;
+  height: 4.35rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bree Serif', serif;
+  color: #00acdd;
+}
+
+header h1 {
+  color: #004166;
+  font-weight: bold;
+}
+
+header h1 span#subject {
+  color: #96bc33;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link {
+  color: #00acdd;
+}
+
+a:visited {
+  color: #ea2126;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #f58a1e;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+nav#main-menu {
+  background-color: #004166;
+  font-weight: bold;
+  border: 2px solid #e6e7e8;
+  border-radius: 5px;
+}
+
+main section#principal {
+  border: 2px solid #004166;
+  border-radius: 5px;
+}
+
+main section article.news-art {
+  border: 5px solid #e6e7e8;
+  border-radius: 0.8rem;
+}
+
+div#content main section#principal article#primerElemento {
+  background-color: #e6e7e8;
+  border-color: #f58a1e;
+}
+
+div#content main section article.news-art img {
+  width: 20rem;
+  height: auto;
+}
+
+div#content main section article.news-art p {
+  padding: 0 1rem;
+}
+
+
+
+@media (min-width: 720px) {
+
+  article{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  article h3{
+    flex: 0 100%;
+    text-align: left;
+  }
+
+  article p{
+    flex: 0 50%;
+    align-self: flex-start;
+    text-align: left;
+  }
+
+}
+
+
+
+@media (min-width: 1024px) {
+
+  #principal{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #principal > h2{
+    flex:0 100%;
+    text-align: left;
+  }
+
+
+  #main-menu > label,input{
+    display: none;
+  }
+
+  #main-menu > ul{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  article{
+    flex: 0 50%;
+  }
+
+  article#primerElemento{
+    flex:0 100%;
+  }
+
+}
