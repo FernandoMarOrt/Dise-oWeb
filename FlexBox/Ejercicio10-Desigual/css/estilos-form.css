@@ -84,8 +84,6 @@ ul>li>a {
     text-decoration: none;
 }
 
-/* el submenu */
-
 .submenu {
     display: none;
     background-color: black;
@@ -93,7 +91,6 @@ ul>li>a {
 
 }
 
-/* Mostrar el submenu al pasar por el ulmenu */
 #menu>li:hover>.submenu {
     display: flex;
 }
