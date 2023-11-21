@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header>picture#logo-cabecera {
+    flex: 60%;
+    padding-left: 0.5rem;
+}
+
+header>picture#logo-cabecera>img {
+    width: 10rem;
+    height: auto;
+}
+
+header>nav#bloque-iconos>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 25%;
+    list-style: none;
+    padding-right: 1rem;
+
+}
+
+header>nav#bloque-iconos ul>li {
+    flex-basis: 10%;
+    padding: 0.5rem;
+}
+
+header>nav#bloque-iconos ul>li:nth-child(2) {
+    padding-left: 1.5rem;
+}
+
+header>nav#bloque-iconos ul>li>a {
+    color: black;
+    font-size: 2rem;
+}
+
+nav#menu-principal {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav#menu-principal div#hamburguesa {
+    display: flex;
+    flex-direction: column;
+}
+
+nav#menu-principal div#hamburguesa>span:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+/*Menu flexible*/
+
+ul#menu {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+}
+
+nav#menu-principal:hover>ul#menu {
+    display: flex;
+}
+
+ul#menu>li {
+    border-bottom: 1px white solid;
+    margin: 0.5rem 0;
+}
+
+ul>li>a {
+    color: white;
+    text-decoration: none;
+}
+
+/* el submenu */
+
+.submenu {
+    display: none;
+    background-color: black;
+    list-style: none;
+
+}
+
+/* Mostrar el submenu al pasar por el ulmenu */
+#menu>li:hover>.submenu {
+    display: flex;
+}
+
+
+
+
+
+/*PRINCIPAL*/
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main>section#form-contacto {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 50%;
+}
+
+main>section#form-contacto>h2 {
+    flex: 0 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+
+main>section#form-contacto>form#contacto {
+    display: flex;
+    flex-direction: column;
+    flex: 0 50%;
+    margin: 0 auto;
+}
+
+main>section#form-contacto>form#contacto>span,
+label,
+input {
+    flex: 0 50%;
+}
+
+main>section#form-contacto>form#contacto>label {
+    display: none;
+}
+
+main>section#form-contacto>form#contacto>input,
+select,
+textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: #6a6868;
+}
+
+main>section#form-contacto>form#contacto>input:nth-child(15) {
+    background-color: black;
+    color: white;
+}
+
+main>section#form-contacto>form#contacto>input:focus,
+select:focus,
+textarea:focus {
+    background-color: black;
+    border: 4px solid #7a7878;
+}
+
+main>section#form-contacto>form#contacto>span#caracteres {
+    font-size: 0.8rem;
+    color: #6f6d6d;
+    margin-bottom: 0.4rem;
+}
+
+
+/*PIE DE PAGINA*/
+footer {
+    display: none;
+}
+
