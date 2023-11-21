@@ -93,6 +93,7 @@ ul>li>a {
 
 #menu>li:hover>.submenu {
     display: flex;
+    flex-direction: column;
 }
 
 
