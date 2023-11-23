@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../../xampp/htdocs/Proyectos/Curso23_24"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DiseñoWEB"
+	}
+}
