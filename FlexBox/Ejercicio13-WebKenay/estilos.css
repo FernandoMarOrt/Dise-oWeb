@@ -32,7 +32,6 @@ div#contenido>header>div#barra-busqueda{
     flex-direction: row;
     flex-wrap: wrap;
     flex: 100%;
-    margin-top: -1rem;
     
 }
 
@@ -43,27 +42,26 @@ div#contenido>header>div#barra-busqueda>#contenedor {
     display: flex;
     flex-wrap: wrap;
     flex: 100%;
+    padding: 0.6rem;
     
 }
 div#contenido>header>div#barra-busqueda>#contenedor>img{
-    position: relative;
-    top: 1.7rem;
+    position: absolute;
+    top: 3rem;
     left: 7.7rem;
     z-index: 1;
+    
 }
 div#contenido>header>div#barra-busqueda>#contenedor>input#search {
     flex: 100%;
     text-align: center;
-    background: rgb(214, 213, 213);
+    background: #ededed;
     border: none;
     padding: 0.5rem;
     font-size: 12px;
     color: black;
     border-radius: 5px;
 }
-
-
-
 
 
 div#contenido>header>nav#iconos-cabecera{
@@ -98,6 +96,13 @@ div#contenido>main>section>article {
 
 div#contenido>main>section>h2 {
     margin-bottom: 0;
+    flex: 100%;
+    text-align: center;
+}
+
+.fotos{
+    height: auto;
+    width: 96%;
 }
 
 div#contenido>main>section>article>h3 {
