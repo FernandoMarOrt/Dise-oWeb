@@ -2,73 +2,59 @@
     box-sizing: border-box;
 }
 
-body form {
+div#contenido{
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    width: 25em;
 }
 
-#genero{
-    margin-left: 0.5em;
+div#contenido>form {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100%;
+
 }
 
-#genero label{
+div#contenido>form>div#genero{
+    margin-left: 0.5rem;
+}
+
+div#contenido>form>div#genero label{
     font-weight: bold;
     font-size: 15px;
 }
 
-#genero input{
+div#contenido>form>div#genero input{
     font-size: 10px;
-    height: 12px;
-    width: 12px;
 }
-body form a {
+
+div#contenido>form>a {
     text-decoration: none;
     color: black;
     font-size: 12px;
-    margin-top: 1em;
-    padding-left: 8px;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
 }
 
-body form input,select,option {
+div#contenido>form>input,select,option {
     border: none;
     border-bottom: 1px solid lightgray;
-    margin-top: 1em;
-    padding: 0 0 10px 15px;
+    margin-top: 1rem;
+    padding: 0 0 0.7rem 1rem;
 }
 
 
-body form button {
-    margin-top: 1em;
-    color: burlywood;
-    background-color: rgb(54, 54, 54);
-    border-radius: 20em;
-    height: 4em;
-    width: 12em;
-    margin-left: -10px;
-}
 
-#nacimiento{
+
+div#contenido>form>label#nacimiento{
     font-size: 11px;
     font-weight: bold;
-    margin-top: 1em;
-    margin-left: 1em;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
-#texto{
-    font-size: 13px;
-}
-
-#suscribirse{
-    margin-top: 1em;
-    border-left: 2px solid lightgray;
-    padding-left: 10px;
-    margin-left: -15px;
-}
-
-#selectNaci{
-    padding-bottom: 20px;
+div#contenido>form>div#selectNaci{
+    padding-bottom: 1rem;
     border-bottom: 1px solid lightgray;
 }
 
@@ -79,16 +65,90 @@ body form button {
     background-color: white;
 }
 
-#provincia,#pais{
+div#contenido>form>select#provincia,#pais{
     background-color: white;
     color: gray;
 }
 
-#info{
+div#contenido>form>label#info{
 
-    margin: 2em 0 1em 0;
+    margin: 2rem 0 1rem 0;
     margin-left: 0.7em;
     color: rgb(68, 68, 68);
     font-size: 12px;
 }
 
+div#contenido>form>div#suscribirse>label#texto{
+    font-size: 13px;
+}
+
+div#contenido>form>div#suscribirse{
+    margin-top: 1rem;
+    border-left: 2px solid lightgray;
+    padding-left: 0.8rem;
+}
+
+div#contenido>form>button {
+    margin-top: 1rem;
+    color: burlywood;
+    background-color: rgb(54, 54, 54);
+    border-radius: 20rem;
+    height: 4rem;
+    width: 12rem;
+}
+
+
+
+@media (min-width: 1024px){
+    
+    div#contenido{
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    div#contenido>form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 40%;
+        justify-content: space-around;
+    }
+    
+    div#contenido>form>div#genero{
+        flex: 100%;
+    }
+    
+    div#contenido>form>input{
+        flex: 48%;
+        padding: 1rem;
+        margin: 1%;
+    }
+
+
+    div#contenido>form>label#nacimiento{
+        flex: 100%;
+        text-align: center;
+    }
+
+    div#contenido>form>div#selectNaci{
+      flex: 100%;
+    }
+
+    div#contenido>form>select#pais,#provincia{
+        flex: 48%;
+        margin: 1%;
+        padding-top: 1rem;
+    }
+
+    div#contenido>form>label#info{
+        flex: 100%;
+        text-align: center;
+        margin: 0;
+        padding-top: 1.5rem;
+    }
+
+    div#contenido>form>input#telefono{
+        text-align: center;
+    }
+
+
+}
