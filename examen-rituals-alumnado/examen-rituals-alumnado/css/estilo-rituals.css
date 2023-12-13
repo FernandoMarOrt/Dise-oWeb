@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+div#content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+body {
+    background-color: #efedeb;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    background-color: #f5f4f3
+}
+
+article {
+    background: white;
+    color: #515152;
+    border: 2px solid #eeedec;
+}
+
+article>img {
+    background-color: #faf9f8;
+
+}
+
+
+/*   body: background-color: #efedeb;
+    header: background-color: #1a191a;
+    section:  background-color: #f5f4f3;
+    h2 y div (section):  background-color: black;
+    article: background: white; color: #515152; border: 2px solid #eeedec;
+    img del article: background-color: #faf9f8;
+    footer: background-color: black;*/
+
+div#content>header#header-web {
+    background-color: #1a191a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 1rem 1rem 1rem;
+    flex: 100%;
+
+}
+
+header>nav#menu-principal{
+    display: flex;
+    
+}
+header>nav#menu-principal>label>span {
+    color: white;
+}
+
+header>nav#menu-principal>label {
+    display: flex;
+}
+
+header>nav#menu-principal>ul {
+    display: none;
+}
+
+header>nav#menu-principal>input {
+    display: none;
+}
+
+header>nav#menu-principal>input:checked+ul {
+    display: block;
+}
+
+header>nav#bloque-iconos {
+    display: flex;
+    flex-direction: row;
+}
+
+header>nav#bloque-iconos {
+    display: flex;
+    flex-direction: row;
+    order: 2;
+}
+
+header>a>svg {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+}
+
+
+/*MAIN*/
+
+main>section#sec-gelducha {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 100%;
+}
+
+main>section#sec-gelducha>h2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    flex: 100%;
+}
+
+main>section#sec-gelducha>div {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    flex: 100%;
+}
+
+main>section#sec-gelducha>article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+
+}
+
+main>section#sec-gelducha>article>picture {
+    order: 1;
+    flex: 100%;
+}
+
+main>section#sec-gelducha>article>h3 {
+    order: 2;
+    flex: 100%;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    color: grey;
+}
+
+
+main>section#sec-gelducha>article>p {
+    order: 3;
+    flex: 60%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+main>section#sec-gelducha>article>span {
+    order: 4;
+    flex: 48%;
+    padding: 2.5rem 1rem 1rem 1rem;
+}
+
+main>section#sec-gelducha>article>img {
+    order: 5;
+    width: 20%;
+    height: auto;
+}
+
+main>section#sec-gelducha>article>input {
+    display: none;
+}
+
+.item-sec>picture>img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+/*FOOTER*/
+
+
+div#content>footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 100%;
+    background-color: black;
+}
+
+
+div#content>footer>nav#menu-adicional {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 100%;
+    color: white;
+}
+
+div#content>footer>nav#menu-adicional>ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+    padding: 1rem;
+    flex: 100%;
+}
+
+div#content>footer>nav#menu-adicional>ul>li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    padding: 1rem;
+
+}
+
+div#content>footer>nav#menu-adicional>ul>li>span:nth-child(1) {
+    border-bottom: 1px solid white;
+    flex: 30%;
+    padding-bottom: 1.5rem;
+}
+
+div#content>footer>nav#menu-adicional>ul>li>span:nth-child(2) {
+    border-bottom: 1px solid white;
+}
+
+
+div#content>footer>nav#menu-adicional>ul>li>ul {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    display: none;
+}
+
+div#content>footer>nav#menu-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#content>footer>nav#menu-social>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 100%;
+}
+
+
+div#content>footer>nav#menu-social>ul>li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 25%;
+}
+
+div#content>footer>nav#menu-social>ul>li>a>img {
+    width: 20%;
+    height: auto;
+
+}
+
+
+div#content>footer>picture {
+    text-align: center;
+    padding: 1rem;
+}
+
+div#content>footer>small {
+    flex: 100%;
+    color: white;
+    text-align: center;
+}
+
+
+/*VERSION TABLET*/
+
+@media (min-width:800px) {
+
+    main>section#sec-gelducha>article {
+
+        flex-basis: 33%;
+
+    }
+
+}
+
+@media (min-width:1024px) {
+
+
+    /*HEADER*/
+
+    header>nav#menu-principal{
+        align-self: center;
+        justify-content: center;
+        
+    }
+
+    header>nav#menu-principal>label>span {
+        display: none;
+    }
+
+
+    header>nav#menu-principal>ul {
+        display: flex;
+        font-size: 12px;
+ 
+    }
+
+    header>nav#menu-principal>ul>li {
+        display: flex;
+        list-style: none;
+    }
+
+
+    header>nav#menu-principal>ul>li>a{
+        color: grey;
+        text-decoration: none;
+        padding: 0 0.4rem 0 0.4rem;
+    }
+
+    header>nav#menu-principal>ul>li>a>span:nth-child(2){
+        display: none;
+    }
+
+
+    header>nav#menu-principal>input {
+        display: none;
+    }
+
+    header>nav#menu-principal>input:checked+ul {
+        display: flex;
+    }
+
+
+    header>nav#bloque-iconos {
+        flex: 15%;
+        justify-content: right;
+    }
+    
+    header>a>svg {
+        flex: 15%;
+        
+    }
+    
+
+    /*MAIN*/
+
+    main>section#sec-gelducha>article {
+
+        flex-basis: 25%;
+
+    }
+
+    
+
+
+
+
+    /*FOOTER*/
+
+    div#content>footer>nav#menu-adicional>ul {
+        flex-direction: row;
+
+    }
+
+    div#content>footer>nav#menu-adicional>ul>li {
+        flex: 25%;
+        font-size: 9.5px;
+
+    }
+
+    div#content>footer>nav#menu-adicional>ul>li>span:nth-child(1) {
+        border-bottom: none;
+    }
+
+    div#content>footer>nav#menu-adicional>ul>li>span:nth-child(2) {
+        border-bottom: none;
+        display: none;
+    }
+
+    div#content>footer {
+        flex-direction: row;
+    }
+
+
+    div#content>footer>nav#menu-adicional {
+        flex: 80%;
+
+    }
+
+    div#content>footer>nav#menu-social {
+        flex: 20%;
+
+    }
+
+    div#content>footer>nav#menu-social>ul>li>a>img {
+        padding-top: 1rem;
+        width: 70%;
+        height: auto;
+
+    }
+
+    div#content>footer>picture {
+        flex: 100%;
+        padding: 0 0 1rem 0;
+    }
+
+}

@@ -57,6 +57,8 @@ header input:checked+ul#menu {
     display: block;
 }
 
+
+
 /*Para quitar el formato enlace del menú*/
 header ul>li {
     list-style: none;
