@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/fondo.jpg");
+}
+
+main>div.row>div.large-12-columns>ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main>div.row>div.large-12-columns>ul>li>a>img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+main>div.row>div.large-12-columns>ul>li>a {
+  text-decoration: none;
+}
+
+main>div.row>div.large-12-columns>ul>li>a>span {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+main>div.row>div.large-12-columns>ul>li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 20%;
+  text-align: center;
+  background-color: white;
+  padding: 1%;
+  margin: 2%;
+}
+
+/*POSICION DE LAS IMAGENES*/
+
+main>div.row>div.large-12-columns>ul>li:nth-child(1) {
+  transform: rotate(-2deg);
+}
+
+main>div.row>div.large-12-columns>ul>li:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+main>div.row>div.large-12-columns>ul>li:nth-child(4) {
+  transform: rotate(2deg);
+}
+
+main>div.row>div.large-12-columns>ul>li:nth-child(5) {
+  transform: rotate(5deg);
+}
+
+main>div.row>div.large-12-columns>ul>li:nth-child(7) {
+  transform: rotate(-2deg);
+}
+
+main>div.row>div.large-12-columns>ul>li:nth-child(8) {
+  transform: rotate(4deg);
+}
+
+main>div.row>div.large-12-columns>ul>li:nth-child(10) {
+  transform: rotate(4deg);
+}
+
+main>div.row>div.large-12-columns>ul>li:nth-child(11) {
+  transform: rotate(-4deg);
+}
+
+main > div.row > div.large-12-columns > ul > li:hover {
+  transform: scale(1.2) rotate(0deg);
+}
