@@ -1,53 +1,56 @@
 * {
   box-sizing: border-box;
 }
-/*BODY*/
+/*MAIN*/
 body {
   background-color: lightblue;
+  display: flex;
+}
+
+main.main-container{
   display: flex;
   flex-direction: row-reverse;
   justify-content: start;
   align-items: flex-start;
 }
+
 /*HAMBURGUESA*/
-input {
+main.main-container>input {
   display: none;
 }
 label.menu-toogle {
   left: 0;
 }
-label.menu-toogle > div {
+main.main-container> label.menu-toogle > div {
   background-color: #293133;
-  padding: 5px;
-  border-radius: 5px;
-  margin-left: 5px;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  margin-left: 0.3rem;
   cursor: pointer;
   transition: left 5s;
 }
 
-label.menu-toogle > div > span.hamburguer-line {
+main.main-container> label.menu-toogle > div > span.hamburguer-line {
   display: flex;
   flex-direction: column;
-  width: 2em;
-  height: 2px;
+  width: 2rem;
+  height: 0.2rem;
   background-color: white;
   margin: 5px 0;
 }
 
 /*MENU*/
 nav.main-menu {
-  position: fixed;
-  left: -200px;
-  top: -10px;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  position: fixed;
+  padding-top: 3.5rem;
+  left: -12.5rem;
+  top: -0.6rem;
   background-color: #293133;
   width: 200px;
   height: 100vh;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
   transition: left 0.25s;
 }
 input#hamburger:checked ~ nav.main-menu {
@@ -56,14 +59,15 @@ input#hamburger:checked ~ nav.main-menu {
   left: -10px;
   transition: left 2s;
 }
+
 input#hamburger:checked ~ label.menu-toogle {
   transition: left 5s;
 }
+
 nav.main-menu > a {
   text-decoration: none;
   color: white;
-  padding: 10px;
-  border-top: 0.1rem solid white;
-  border-bottom: 0.1rem solid white;
-  display: block;
+  padding: 0.4rem;
+  border-top: 0.1rem solid grey;
+  border-bottom: 0.1rem solid grey;
 }
