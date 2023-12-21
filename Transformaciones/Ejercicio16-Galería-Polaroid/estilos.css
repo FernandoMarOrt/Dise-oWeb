@@ -76,5 +76,9 @@ main>div.row>div.large-12-columns>ul>li:nth-child(11) {
 }
 
 main > div.row > div.large-12-columns > ul > li:hover {
-  transform: scale(1.2) rotate(0deg);
+  transform: rotate(0deg);
+}
+
+main > div.row > div.large-12-columns > ul > li >a:hover {
+  transform: scale(1.1);
 }

@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+/*MAIN*/
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main>form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+main>form>* {
+
+  margin: 0.5rem;
+
+}
+
+
+/*ANIMACION PLACEHOLDER*/
+
+
+main>form input:valid+label#lemail,
+main>form input:focus+label#lemail {
+  color: darkgreen;
+  font-weight: 700;
+  font-size: 12px;
+  transform: translate3d(0, -12px, 0);
+}
+
+
+main>form input:valid+label#lpassword,
+main>form input:focus+label#lpassword {
+  color: darkgreen;
+  font-weight: 700;
+  font-size: 12px;
+  transform: translate3d(0, -12px, 0);
+}
+
+
+main>form input:focus {
+  background: lightcyan;
+}
+
+main > form > input {
+  padding: 1.3rem;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  background: lightblue;
+  outline: none;
+  appearance: none;
+  transition: all 0.2s ease-in-out;
+}
+
+main > form > label#lemail {
+  position: absolute;
+  color: darkblue;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+  top: 6.5rem;
+}
+
+main > form > label#lpassword {
+  position: absolute;
+  color: darkblue;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+  top: 11.2rem;
+}
+
+main > form > a {
+  color: purple;
+  text-decoration: none;
+}
+
+main > form > a:hover {
+  text-decoration: underline;
+}
