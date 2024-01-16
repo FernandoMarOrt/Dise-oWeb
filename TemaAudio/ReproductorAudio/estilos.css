@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#reproductorAudio {
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    padding: 1em;
+}
+
+img{
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+#progreso{
+    padding-bottom: 1em;
+}
+
