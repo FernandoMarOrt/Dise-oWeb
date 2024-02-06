@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modelo de Caja Flexible. Ejercicio1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="lang" content="es-ES">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<link rel="STYLESHEET" type="text/css" href="./css/estilo-crear-cuenta.css">
+</head>
+<body>
+	<div id="contenido">
+		<header id="cabecera">
+			<nav id="cabecera-principal">
+				<svg id="icono-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+				<picture><img src="./img/logo.png" width="35" alt="logo"></picture>
+				<h1 id="titulo">CrunchyLoots</h1>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5 22h14a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1h-3v-.777c0-2.609-1.903-4.945-4.5-5.198A5.005 5.005 0 0 0 7 7v1H4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2zm12-12v2h-2v-2h2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-2 3h2v2H7v-2z"></path></svg>
+			</nav>
+		</header>
+		<main>
+			<section id="cuerpo">
+				<h1>Crea tu cuenta</h1>
+				<form action="login.html" method="post">
+
+					<input type="text" id="email" name="email" placeholder="E-mail" required>
+				
+					<input type="password" id="password" name="password" placeholder="Contraseña" required>
+				
+
+					<select name="prefijo" id="prefijo">
+						<option value="opcion1">+34</option>
+						<option value="opcion2">+35</option>
+						<option value="opcion3">+36</option>
+					</select>
+
+					<p>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M7 5c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2H7zm0 12V7h10l.002 10H7z"></path><path d="M10.996 12.556 9.7 11.285l-1.4 1.43 2.704 2.647 4.699-4.651-1.406-1.422z"></path></svg>
+						<label>Recibir promociones, novedades y contenidos promocionales</label>
+					</p>
+
+
+					<button id="crear-cuenta">Crear cuenta</button>
+
+					<label id="label1">¿Ya tienes cuenta? <a>Inicia sesion</a></label>
+
+					<label id="label2">Al crear una cuenta y suscribirte, confirmas que has leído
+						la <a>Política de privacidad</a> y aceptas las <a>Condiciones de 
+							venta</a>.</label>
+				</form>
+
+			</section>
+
+		</main>
+	</div>
+    
+</body>
+</html>

@@ -52,10 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
         video.muted = !video.muted;
         if (video.muted) {
             silenciarBtn.getElementsByTagName("img")[0].src = imagenAudioMuted;
+            video.dataset.volumenAntesDeSilenciar = volumenSlider.value;
+            volumenSlider.value = 0;
         } else {
             silenciarBtn.getElementsByTagName("img")[0].src = imagenAudio;
+            volumenSlider.value = video.dataset.volumenAntesDeSilenciar || 100;
         }
     }
+
     
 
 
@@ -110,6 +114,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+   
 
 
 
