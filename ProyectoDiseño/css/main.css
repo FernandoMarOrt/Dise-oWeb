@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+div#contenido{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*CABECERA*/
+div#contenido>header#cabecera{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+div#contenido>header#cabecera>nav#cabecera-principal>h1#titulo{
+    color: red;
+ 
+}
+
+div#contenido>header#cabecera>nav#buscador{
+    display: flex;
+    padding: 0 1rem 0 1rem;
+    
+}
+
+div#contenido>header#cabecera>nav#buscador>svg#lupa{
+    position: absolute;
+    left: 2rem;
+    top: 5.6rem;
+    
+}
+
+div#contenido>header#cabecera>nav#buscador>input{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    flex-basis: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+/*FIN-CABECERA*/
+
+
+
+/*CUERPO*/
+
+div#contenido>main>section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+div#contenido>main>section>h1{
+    padding: 1rem;
+}
+
+div#contenido>main>section>picture>img{
+    border: 3px solid black;
+}
+
+/*FIN-CUERPO*/

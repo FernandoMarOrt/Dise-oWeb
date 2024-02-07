@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -69,18 +70,41 @@ main>section#cuerpo>form>input{
 }
 
 
-main>section#cuerpo>form>p{
+
+main>section#cuerpo>form>div#ntelefono{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: left;
-    padding-left: 0;
+    justify-content: space-between;
+    padding: 0;
 }
 
-main>section#cuerpo>form>p:nth-child(3){
-    color: grey;
+main>section#cuerpo>form>div#ntelefono>*{
+    padding: 1rem;
+ 
 }
+
+main>section#cuerpo>form>div#ntelefono>select{
+    background-color: white;
+    border: 1px solid black;
+ 
+}
+
+
+
+main>section#cuerpo>form>div#promociones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0;
+    font-size: 12px;
+}
+
+
+main>section#cuerpo>form>div#promociones>label{
+    padding-left: 0.5rem;
+}
+
+
 
 main>section#cuerpo>form>button#crear-cuenta{
     color: white;
@@ -93,7 +117,7 @@ main>section#cuerpo>form>button#crear-cuenta{
 
 main>section#cuerpo>form>label#label1{
     color: black;
-    text-align: center;
+    padding-left: 0;
     font-size: 14px;
 }
 main>section#cuerpo>form>label>a{
@@ -103,6 +127,7 @@ main>section#cuerpo>form>label>a{
 
 main>section#cuerpo>form>label#label2{
     font-size: 12px;
+    padding-top: 0;
     padding-left: 0;
 }
 /*FIN-CUERPO*/
