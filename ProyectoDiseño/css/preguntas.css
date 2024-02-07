@@ -58,32 +58,47 @@ div#contenido>header#cabecera>nav#buscador>input{
 
 
 
+
+
+
+
+
+
 /*CUERPO*/
 
 div#contenido>main>section{
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
 }
 
 div#contenido>main>section>h1{
-    padding: 1rem;
+    padding: 1rem 0.5rem 1rem 0rem;
 }
 
-div#contenido>main>section>picture>img{
-    border: 3px solid black;
+
+div#contenido>main>section>div{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+div#contenido>main>section>div>p.pregunta{
+    font-weight: bold;
 }
 
 div#contenido>main>hr{
     border: 2px solid black;
-    margin: 2rem 0 2rem 0;
+    margin-top: 2rem;
 }
 /*FIN-CUERPO*/
 
 
 /*PIE*/
 div#contenido>footer{
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
 }
