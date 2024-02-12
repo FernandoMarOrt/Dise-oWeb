@@ -71,6 +71,12 @@ div#contenido>main>section>h1{
     padding: 1rem;
 }
 
+div#contenido>main>section>picture{
+    display: flex;
+    flex-direction: column;
+    
+}
+
 div#contenido>main>section>picture>img{
     border: 3px solid black;
 }
