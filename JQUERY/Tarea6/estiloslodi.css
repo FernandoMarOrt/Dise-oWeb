@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem 0 0.5rem;
+    
+  
+}
+
+.fijado {
+    position: fixed;
+    opacity: 0.4;
+    border: 1px solid black;
+   
+    
+}
+
+/*Orden de la cabecera*/
+header>nav#menu-principal {
+    order: 1;
+    margin-right: -2rem;
+}
+
+header>nav#buscador {
+    order: 2;
+   
+}
+
+header>picture {
+    order: 3;
+}
+
+header>nav#compra {
+    order: 4;
+}
+
+/*Ajusto tamaño del logo*/
+header > picture > img#logo {
+    width: 80px; 
+    height: auto;
+}
+
+
+/*Menu desplegable*/
+header nav>ul#menu {
+    display: none;
+}
+
+header input {
+    display: none;
+}
+
+header input:checked+ul#menu {
+    display: block;
+}
+
+
+
+/*Para quitar el formato enlace del menú*/
+header ul>li {
+    list-style: none;
+}
+
+header ul>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*MAIN*/
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    
+}
+
+body{
+    margin: 0;
+}
+
+main>article.item {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-basis: 49%;
+    text-align: center;
+    margin: 0 0.5% 0 0.5%;
+}
+
+main>article.item img {
+    width: 100%;
+    height: auto;
+}
+
+/*Ordeno los articulos*/
+main>article.item>a {
+    color: black;
+    text-decoration: none;
+    order: -2;
+}
+
+main>article.item>p {
+    order: -3;
+}
+
+
+
+/*PIE DE PAGINA*/
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+
+/*Menu Adicional*/
+
+footer>nav#menu-adicional>ul>li {
+    border-bottom: 1px solid grey;
+    list-style: none;
+    padding: 0.5rem 0 0.4rem 0;
+    margin-left: -2rem;
+}
+
+footer>nav#menu-adicional>ul>li>a{
+    text-decoration: none;
+    color: black; 
+}
+
+/*Menu Iconos sociales*/
+footer>nav#iconos-sociales>ul {
+    display: flex;
+    text-align: row;
+    justify-content: center;
+}
+
+footer>nav#iconos-sociales>ul>li>a>i {
+    color: grey;
+    font-size: 150%;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+footer>nav#iconos-sociales>ul>li{
+    list-style: none;
+}
+
+
