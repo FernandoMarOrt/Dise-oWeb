@@ -64,27 +64,37 @@ div#contenido>main>section{
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 div#contenido>main>section>h1{
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
-div#contenido>main>section>picture{
+div#contenido>main>section>div.opinion{
     display: flex;
     flex-direction: column;
-    
-}
-
-div#contenido>main>section>picture>img{
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    text-align: left;
     border: 3px solid black;
+    border-radius: 30px;
 }
 
-div#contenido>main>hr{
-    border: 2px solid black;
-    margin: 2rem 0 2rem 0;
+div#contenido>main>section>div.opinion>p#perfilopinion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+
+
+div#contenido>main>section>div.opinion>p>picture>img{
+    border-radius: 100%;
+    margin-right: 0.5rem;
+}
+
+
 /*FIN-CUERPO*/
 
 
@@ -92,7 +102,6 @@ div#contenido>main>hr{
 div#contenido>footer{
     display: flex;
     flex-direction: column;
-    margin-top: 15rem;
 }
 
 div#contenido>footer>div#informacion{
