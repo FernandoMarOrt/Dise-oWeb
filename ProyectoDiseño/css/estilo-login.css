@@ -7,7 +7,6 @@
 div#contenido{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 /*CABECERA*/
@@ -28,8 +27,11 @@ div#contenido>header#cabecera>nav#cabecera-principal{
 }
 
 
-div#contenido>header#cabecera>nav#cabecera-principal>h1#titulo{
-color: red;
+div#contenido>header#cabecera>nav#cabecera-principal>a{
+    text-decoration: none;
+}
+div#contenido>header#cabecera>nav#cabecera-principal>a>h1#titulo{
+    color: red;
 }
 /*FIN-CABECERA*/
 

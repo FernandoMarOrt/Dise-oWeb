@@ -8,7 +8,6 @@
 div#contenido{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 /*CABECERA*/
@@ -28,8 +27,10 @@ div#contenido>header#cabecera>nav#cabecera-principal{
     padding: 1rem;
 }
 
-
-div#contenido>header#cabecera>nav#cabecera-principal>h1#titulo{
+div#contenido>header#cabecera>nav#cabecera-principal>a{
+    text-decoration: none;
+}
+div#contenido>header#cabecera>nav#cabecera-principal>a>h1#titulo{
     color: red;
 }
 
@@ -39,10 +40,10 @@ div#contenido>header#cabecera>nav#buscador{
     
 }
 
-div#contenido>header#cabecera>nav#buscador>svg#lupa{
+div#contenido>header#cabecera>nav#buscador>img#lupa{
     position: absolute;
     left: 2rem;
-    top: 5.6rem;
+    top: 5.4rem;
     
 }
 
@@ -90,9 +91,9 @@ div#contenido>main>hr{
 
 /*PIE*/
 div#contenido>footer{
-    padding-top: 2rem;
     display: flex;
     flex-direction: column;
+   
 }
 
 div#contenido>footer>div#informacion{
@@ -132,6 +133,7 @@ div#contenido>footer>div#caja-negra>div#redes-div{
     flex-direction: column;
 }
 
+
 div#contenido>footer>div#caja-negra>div#redes-div>p{
     padding: 1rem 1rem 0.5rem 1rem;
 }
@@ -142,6 +144,10 @@ div#contenido>footer>div#caja-negra>div#redes-div>div#redes{
     justify-content: space-between;
     padding:1rem;
 }
+div#contenido>footer>div#caja-negra>div#redes-div>div#redes>img{
+    filter: brightness(0) invert(1);
+}
+
 
 div#contenido>footer>div#caja-negra hr{
     border: 1px solid white;
@@ -152,14 +158,17 @@ div#contenido>footer>div#caja-negra hr{
 div#contenido>footer>div#caja-negra>div#politicas{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem;
 }
 div#contenido>footer>div#caja-negra>div#politicas>a{
     color: white;
     text-decoration: none;
+    text-align: center;
     padding: 0.3rem 0 0.3rem 0;
+    flex-basis: 50%;
+    
 }
 
 div#contenido>footer>div#caja-negra>div#idioma{
@@ -175,6 +184,9 @@ div#contenido>footer>div#caja-negra>div#idioma>div{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+div#contenido>footer>div#caja-negra>div#idioma>div>img{
+    filter: brightness(0) invert(1);
 }
 
 
