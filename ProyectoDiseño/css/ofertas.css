@@ -82,6 +82,11 @@ div#contenido>main>section>div{
     
 }
 
+div#contenido>main>section>div>p.ofertas{
+    color: red;
+    font-weight: bold;
+}
+
 div#contenido>main>section>div>picture>img{
     border: 3px solid black;
 }

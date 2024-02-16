@@ -16,26 +16,29 @@
 	<link rel="stylesheet" type="text/css" href="estiloslodi.css">
 
 	<script src="jquery-3.7.1.min.js" type="text/javascript"></script>
-<script>
+	<script>
 
-    $(document).ready(function () {
+		$(document).ready(function () {
 
-        $("#menu-hamburger").hover(
-            function () {
-                $(this).addClass('cambioColor');
-            },
-            function () {
-                $(this).removeClass('cambioColor');
-             
-            }
-        );
+			$("#menu-hamburger").on({
+				mouseenter:
+					function () {
+						$(this).addClass('cambioColor');
+					},
+				mouseleave:
+				function() {
+					$(this).removeClass('cambioColor');
+				},
+			}
 
-        $("#menu-hamburger").click(function () {
-            $("#menu").toggle();
-        });
-    });
+			);
 
-</script>
+			$("#menu-hamburger").click(function () {
+				$("#menu").toggle();
+			});
+		});
+
+	</script>
 
 
 
