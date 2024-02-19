@@ -25,26 +25,29 @@
 		<main>
             <section id="mas-vendidos">
                 <h1>OFERTAS</h1>
-				<div>
-					<p class="ofertas">¡OFERTA FLASH!</p>
-					<p class="ofertas">29,99€</p>
-					<picture><img src="./img/Camiseta1DelanteraN.png"  width="300" alt="Camiseta Vegetta Negra"></picture>
+				<div class="camisetadiv">
+					<div class="overlay"><p class="ofertas">¡OFERTA FLASH!</p><p class="ofertas">29,99€</p></div>
+					<picture><img src="./img/Camiseta1DelanteraN.png"  width="400" alt="Camiseta Vegetta Negra"></picture>
 					<p>Camiseta Drop#2 Vegeta SSJ Negra</p>
 				</div>
-				<div>
-					<picture><img src="./img/Camiseta2DelanteG.png"  width="300" alt="Camiseta Baki Gris"></picture>
+				<div class="camisetadiv">
+					<div class="overlay"><p class="ofertas">¡OFERTA FLASH!</p><p class="ofertas">29,99€</p></div>
+					<picture><img src="./img/Camiseta2DelanteG.png"  width="400" alt="Camiseta Baki Gris"></picture>
 					<p>Camiseta Drop#1 Baki</p>
 				</div>
-				<div>
-					<picture><img src="./img/Camiseta2DelanteB.png" width="300" alt="Camiseta Baki Blanca"></picture>
+				<div class="camisetadiv">
+					<div class="overlay"><p class="ofertas">¡OFERTA FLASH!</p><p class="ofertas">29,99€</p></div>
+					<picture><img src="./img/Camiseta2DelanteB.png" width="400" alt="Camiseta Baki Blanca"></picture>
 					<p>Camiseta Drop#1 Baki Blanca</p>
 				</div>
-				<div>
-					<picture><img src="./img/Camiseta1DelanteB.png" width="300" alt="Camiseta Vegetta Blanca"></picture>
+				<div class="camisetadiv">
+					<div class="overlay"><p class="ofertas">¡OFERTA FLASH!</p><p class="ofertas">29,99€</p></div>
+					<picture><img src="./img/Camiseta1DelanteB.png" width="400" alt="Camiseta Vegetta Blanca"></picture>
 					<p>Camiseta Drop#1 Baki Blanca</p>
 				</div>
-				<div>
-					<picture><img src="./img/Camiseta1DelanteraN.png" width="300" alt="Camiseta Vegetta Negra"></picture>
+				<div class="camisetadiv">
+					<div class="overlay"><p class="ofertas">¡OFERTA FLASH!</p><p class="ofertas">29,99€</p></div>
+					<picture><img src="./img/Camiseta1DelanteraN.png" width="400" alt="Camiseta Vegetta Negra"></picture>
 					<p>Camiseta Drop#2 Vegeta SSJ Negra</p>
 				</div>
 			</section>
@@ -106,218 +109,4 @@
 	</div>
     
 </body>
-</html>
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Example Title</title>
-
-    <style>
-
-        body {
-
-            font-family: Arial, sans-serif;
-
-        }
-
-
-        .highlight {
-
-            color: #d00;
-
-        }
-
-
-        .container {
-
-            text-align: center;
-
-            margin-top: 50px;
-
-        }
-
-
-        h1 {
-
-            font-size: 2.5em;
-
-        }
-
-
-        .flash-sale {
-
-            background-color: #ffc107;
-
-            padding: 5px 10px;
-
-            border-radius: 5px;
-
-            margin: 15px 0;
-
-            display: inline-block;
-
-        }
-
-
-        .price {
-
-            text-decoration: line-through;
-
-            margin-right: 10px;
-
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-    <div class="container">
-
-        <h1>
-
-            Camiseta <span class="highlight">Drop#1</span> <span class="highlight">BAKI</span>
-
-        </h1>
-
-        <p class="flash-sale">OFERTA FLASH!</p>
-
-        <p>
-
-            <span class="price">366'67</span>
-
-            <span class="highlight">67% OFF</span>
-
-        </p>
-
-        <p>Camiseta Drop # 1 Baki</p>
-
-    </div>
-
-</body>
-
-</html>
-
-In this example, I've added a basic HTML structure, some global styles, and specific styles for the given text. I've used the <h1> tag for the main title, the <p> tag for the paragraphs, and <span> for highlighting specific parts of the text. I've also added a flash-sale class to highlight the "OFERTA FLASH!" text with a yellow background.
-
-The highlight class changes the color of the text to #d00 (a shade of red), and the price class adds a line-through style to the original price.
-
-Feel free to modify
-Is this conversation helpful so far?
-
-quiero que el texto este encima de la imagen hazmelo
-
-Sure, I can help you place the text on top of an image using HTML and CSS. Here's an example:
-
-HTML:
-
-html
-
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Example Title</title>
-
-    <style>
-
-        body {
-
-            font-family: Arial, sans-serif;
-
-        }
-
-
-        .container {
-
-            text-align: center;
-
-            position: relative;
-
-            height: 300px; /* Adjust the height to match your image */
-
-        }
-
-
-        img {
-
-            max-width: 100%;
-
-            height: auto;
-
-        }
-
-
-        .text-overlay {
-
-            position: absolute;
-
-            top: 50%;
-
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-
-            color: white;
-
-        }
-
-
-        h1 {
-
-            font-size: 1.5em;
-
-            margin-bottom: 10px;
-
-        }
-
-
-        .price {
-
-            text-decoration: line-through;
-
-            margin-right: 10px;
-
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-    <div class="container">
-
-        <img src="./img/Camiseta1DelanteB.png" alt="Your image description">
-
-        <div class="text-overlay">
-
-            <h1>Camiseta <span class="highlight">Drop#1</span> <span class="highlight">BAKI</span></h1>
-
-            <p class="flash-sale">OFERTA FLASH!</p>
-
-            <p class="price">366'67<span class="highlight">67% OFF</span></p>
-
-            <p>Camiseta Drop # 1 Baki</p>
-
-        </div>
-
-    </div>
-
-</body>
-
 </html>

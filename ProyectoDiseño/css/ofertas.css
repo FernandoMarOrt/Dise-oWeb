@@ -10,6 +10,10 @@ div#contenido{
     flex-direction: column;
 }
 
+div#contenido>main img{ /*Quitar si causa problemas*/
+    width: 100%;
+    height: auto;
+}
 /*CABECERA*/
 div#contenido>header#cabecera{
     display: flex;
@@ -62,6 +66,13 @@ div#contenido>header#cabecera>nav#buscador>input{
 
 /*CUERPO*/
 
+
+div#contenido>main{
+   
+    display: flex;
+    flex-direction: column;
+}
+
 div#contenido>main>section{
     text-align: center;
     display: flex;
@@ -75,16 +86,29 @@ div#contenido>main>section>h1{
 
 
 
-div#contenido>main>section>div{
+div#contenido>main>section>div.camisetadiv{
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    text-align: center;
+    position: relative;
     
 }
 
-div#contenido>main>section>div>p.ofertas{
+div#contenido>main>section>div>div.overlay{
+   display: flex; 
+   flex-direction: column;
+   position: absolute;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(-45deg);
+
+}
+
+div#contenido>main>section>div>div.overlay>p.ofertas{
     color: red;
     font-weight: bold;
+    font-size: 20px;
 }
 
 div#contenido>main>section>div>picture>img{

@@ -9,6 +9,11 @@ div#contenido {
     flex-direction: column;
  
 }
+
+div#contenido>main img{ /*Quitar si causa problemas*/
+    width: 100%;
+    height: auto;
+}
 /*CABECERA*/
 div#contenido>header#cabecera{
     display: flex;
