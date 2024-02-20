@@ -10,7 +10,7 @@ div#contenido {
  
 }
 
-/*CABECERA*/
+
 div#contenido>header#cabecera{
     display: flex;
     flex-direction: column;
@@ -26,11 +26,91 @@ div#contenido>header#cabecera>nav#cabecera-principal{
     padding: 1rem;
 }
 
-div#contenido>header#cabecera>nav#cabecera-principal>div{
+div#contenido>header#cabecera>nav#cabecera-principal>div#logo-compra{
     display: flex;
     flex-direction: row;
-    flex-basis: 100%;
-    justify-content: space-between;
+    flex-basis: 90%;
+    border: 1px solid grey;
+    border-right: none;
     align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal>div#cerrar{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 10%;
+    border: 1px solid grey;
+    padding: 0.25rem;
+    justify-content: center;
+}
+div#contenido>header#cabecera>nav#cabecera-principal>div#cerrar>a>img{
+    transform: rotate(-45deg);
+    width: 40px;
+}
+/*FIN CABECERA*/
+
+
+/*CUERPO*/
+
+div#contenido>main{
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
 }
+
+
+
+div#contenido>main>div#camisetascompradas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div#contenido>main>div#camisetascompradas>img.camisetasC{
+    width: 100%;
+    height: auto;
+    flex-basis: 40%;
+}
+
+div#contenido>main>div#camisetascompradas>div.texto{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 55%;
+    justify-content: space-between;
+}
+
+div#contenido>main>div#camisetascompradas>div.texto>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+    align-items: center;
+}
+
+
+
+div#contenido>main>div#camisetascompradas>div.texto>div>*{
+   flex-basis: 48%;
+   border: 1px solid black;
+   text-align: center;
+   
+}
+
+div#contenido>main>div#camisetascompradas>div.texto>div.titulo>p{
+    font-size: 12px;
+    font-weight: bold;
+    flex-basis: 90%;
+    border: none;
+}
+
+div#contenido>main>div#camisetascompradas>div.texto>div.titulo>img{
+    height: 20px;
+    flex-basis: 0%;
+    border: none;
+    cursor: pointer;
+}
+
+/*FIN CUERPO*/
