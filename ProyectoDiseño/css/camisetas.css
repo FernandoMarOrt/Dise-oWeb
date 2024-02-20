@@ -4,10 +4,10 @@
     padding: 0;
 }
 
-
-div#contenido{
+div#contenido {
     display: flex;
     flex-direction: column;
+ 
 }
 
 div#contenido>main img{ /*Quitar si causa problemas*/
@@ -30,7 +30,6 @@ div#contenido>header#cabecera>nav#cabecera-principal{
     align-items: center;
     padding: 1rem;
 }
-
 
 div#contenido>header#cabecera>nav#cabecera-principal>a{
     text-decoration: none;
@@ -66,12 +65,24 @@ div#contenido>header#cabecera>nav#buscador>input{
 
 /*CUERPO*/
 
+.gris{
+    color: grey;
+    font-size: 15px;
+}
+
+.boton{
+    background-color: white;
+    padding: 0 1.5rem 0 1.5rem;
+    border: 1px solid black;
+    cursor: pointer;
+}
 
 div#contenido>main{
-   
-    display: flex;
-    flex-direction: column;
+   display: flex;
+   flex-direction: column;
+  
 }
+
 
 div#contenido>main>section{
     text-align: center;
@@ -80,45 +91,54 @@ div#contenido>main>section{
     padding: 1rem;
 }
 
-div#contenido>main>section>h1{
-    padding: 1rem;
-}
-
-
-
-div#contenido>main>section>div.camisetadiv{
+div#contenido>main>section>div#cabeceracamisetas{
     display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    text-align: center;
-    position: relative;
-    
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-div#contenido>main>section>div>div.overlay{
-   display: flex; 
-   flex-direction: column;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%) rotate(-45deg);
-
+div#contenido>main>section>div>div#titulo-articulos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left; 
 }
 
-div#contenido>main>section>div>div.overlay>p.ofertas{
-    color: white;
-    font-weight: bold;
-    font-size: 40px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+
+
+div#contenido>main>section>div>div#titulo-articulos>*{
+    flex-basis: 100%;
+}
+div#contenido>main>section>div>div#titulo-articulos>h1{
+    font-size: 20px;
 }
 
-div#contenido>main>section>div>picture>img{
-    border: 3px solid black;
+
+div#contenido>main>section>div.mostrarcamisetas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
 }
 
-div#contenido>main>section>div>h1{
-   padding: 1rem;
+div#contenido>main>section>div.mostrarcamisetas>img{
+    flex-basis: 48%;
+}
+
+div#contenido>main>section>div.mostrarcamisetas>p{
+    padding: 1rem 0 1rem 0;
+}
+
+div#contenido>main>section>div#botonesinferiores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+}
+
+div#contenido>main>section>div#botonesinferiores>button{
+    padding: 0.4rem;
 }
 
 div#contenido>main>hr{
@@ -227,6 +247,7 @@ div#contenido>footer>div#caja-negra>div#idioma>div{
 div#contenido>footer>div#caja-negra>div#idioma>div>img{
     filter: brightness(0) invert(1);
 }
+
 
 
 /*FIN-PIE*/

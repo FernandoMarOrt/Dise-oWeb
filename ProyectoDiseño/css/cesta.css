@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div#contenido {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+/*CABECERA*/
+div#contenido>header#cabecera{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal>div{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
