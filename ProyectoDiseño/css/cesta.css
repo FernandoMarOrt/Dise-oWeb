@@ -117,4 +117,10 @@ div#contenido>main>div#camisetascompradas>div.texto>div.titulo>img{
     cursor: pointer;
 }
 
+div#contenido>main>div#camisetascompradas>div.texto>div>p#referencia{
+    border: none;
+    color: grey;
+    font-size: 12px;
+}
+
 /*FIN CUERPO*/
