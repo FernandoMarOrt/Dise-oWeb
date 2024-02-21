@@ -91,12 +91,16 @@ div#contenido>main>div#camisetascompradas>div.texto>div{
 }
 
 
-
-div#contenido>main>div#camisetascompradas>div.texto>div>*{
-   flex-basis: 48%;
+.izquierda{
+    flex-basis:54%;
    border: 1px solid black;
    text-align: center;
-   
+}
+
+.derecha{
+    flex-basis: 40%;
+   border: 1px solid black;
+   text-align: center;
 }
 
 div#contenido>main>div#camisetascompradas>div.texto>div.titulo>p{
