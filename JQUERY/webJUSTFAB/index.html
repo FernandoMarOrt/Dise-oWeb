@@ -24,14 +24,15 @@
 		$(document).ready(function () {
 
 
-			/*Al hacer varias líneas de scroll en el documento se debe mostrar el botón VOLVER ARRIBA. Al volver a la parte superior de la página el botón se oculta.
+			/*1-Al hacer varias líneas de scroll en el documento se debe mostrar el botón VOLVER ARRIBA. Al volver a la parte superior de la página el botón se oculta.
 			 Al hacer clic sobre el botón nos vamos a la parte superior de la página. Todo se hace con efectos. Debes controlar la acumulación de efectos*/
+			$("ul#menu").css("display","none");
 			$("#menu-principal>span").click(function () {
 				$("#menu").slideToggle();
 			});
 
 
-			/*El menú se debe mostrar y ocultar utilizando efectos y debes controlar la acumulación de efectos en la cola.*/
+			/*2-El menú se debe mostrar y ocultar utilizando efectos y debes controlar la acumulación de efectos en la cola.*/
 			$(window).on("scroll", function () {
 				if ($(this).scrollTop() > 50 && $("#volverarriba").css("display") === "none") {
 
@@ -46,19 +47,65 @@
 			});
 
 
-			/*Cada opción del submenú se muestra con un efecto y al mostrar una se ocultan todas las demás*/
-			let submenu = "#menu>li";
+			/*3-Cada opción del submenú se muestra con un efecto y al mostrar una se ocultan todas las demás*/
+			/*4-En el menú desplegable, cambiar el icono de > (en la web la punta de flecha apunta hacia abajo) por otro similar con la punta de la flecha hacia arriba cuando una opción del menú principal esté desplegada.*/
+			let svg = $(this).find('.fa-angle-down');
 
-			$(submenu).on({
-				click: function () {
-					$(submenu).not(this).children("ul").slideUp();
-					$(this).children("ul").slideToggle();
+			$('ul#menu > li').on('click', function () {
+				$('ul#menu > li').find('.fa-angle-down').css({ transform: 'rotate(0deg)', transition: 'transform 0.5s ease' });
+
+				$('ul#menu > li').not(this).children('ul').slideUp();
+
+				if ($(this).children('ul').is(':hidden')) {
+					$(this).children('ul').slideDown();
+					svg.css({ transform: 'rotate(180deg)', transition: 'transform 0.5s ease' });
+				} else {
+					//Vuelvo a la normalidad
+					$(this).children('ul').slideUp();
+					svg.css({ transform: 'rotate(0deg)', transition: 'transform 0.5s ease' });
 				}
+
 			});
 
 
 
+
+
+			/*5-Cuando haces un poco de scroll sobre la página debe aparecer con el efecto que consideres más apropiado, la cabecera de la página fijada en la parte superior.*/
+			$(window).on('scroll', function () {
+				if ($(this).scrollTop() > 50) {
+					$('header#top > div').css({
+						position: "fixed",
+						opacity: "0.9",
+						backgroundColor: "white",
+						width: "100%",
+					});
+				} else {
+					$('header#top > div').css({
+						position: "",
+						opacity: "",
+						width: "",
+					});
+				}
+			});
+
+			/*6-Al posicionar el ratón sobre la imagen de un producto debe aparecer otra imagen del mismo producto. Cuando el ratón deja de estar sobe la imagen aparece la imagen inicial.*/
+
+
+
+			$('article.item img').on('mouseenter', function () {
+				$(this).stop(true, true).delay(1000).queue(function () {
+					$(this).attr("src", $(this).attr('src').replace('.jpg', '-1.jpg'));
+				})
+			});
+
+			$('article.item img').on('mouseleave', function () {
+				$(this).stop(true, true).attr("src", $(this).attr('src').replace('-1.jpg', '.jpg'));
+			});
+
 		})
+
+
 
 	</script>
 </head>
