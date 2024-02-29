@@ -6,9 +6,56 @@
 	<meta name="lang" content="es-ES">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<link rel="STYLESHEET" type="text/css" href="./css/estilo-crear-cuenta.css">
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="./js/jquery.animate-colors-min.js"></script>
+	<script src="./js/scripts.js"></script>
 </head>
 <body>
 	<div id="contenido">
+		<div id="menu">
+			<header id="cabeceramenu">
+				<nav id="cabecera-principalmenu">
+					<div id="logo-compra">
+						<a href="main.html"><img src="./img/logo.png" width="35" alt="logo"></a>
+						<h1>SECCIONES</h1>
+					</div>
+					<div id="home">
+						<a href="main.html"><img src="./img/svg/home.svg" alt="home"></a>
+					</div>
+					<div id="cerrar">
+						<img src="./img/svg/x.svg" alt="X">
+					</div>
+				</nav>
+			</header>
+	
+	
+			<div id="cuerpo">
+				<div id="secciones">
+					<a href="">
+						<p>NOVEDADES</p>
+					</a>
+					<a href="">
+						<p>OFERTAS</p>
+					</a>
+					<a href="">
+						<p>MAS VENDIDOS</p>
+					</a>
+					<a href="">
+						<p>COLECCIONES</p>
+					</a>
+					<a href="">
+						<p>CAMISETAS</p>
+					</a>
+					<a href="">
+						<p>OPINIONES</p>
+					</a>
+					<a href="">
+						<p>¿QUIENES SOMOS?</p>
+					</a>
+				</div>
+	
+			</div>
+		</div>
 		<header id="cabecera">
 			<nav id="cabecera-principal">
 				<img src="./img/svg/menu.svg" alt="menu">
@@ -19,9 +66,9 @@
 			</nav>
 		</header>
 		<main>
-			<section id="cuerpo">
+			<section id="cuerpomain">
 				<h1>Crea tu cuenta</h1>
-				<form action="login.html" method="post">
+				<div>
 
 					<input type="text" id="email" name="email" placeholder="E-mail" required>
 				
@@ -43,14 +90,14 @@
 					</div>
 
 
-					<button id="crear-cuenta">Crear cuenta</button>
+					<button id="crear-cuenta2">Crear cuenta</button>
 
-					<label id="label1">¿Ya tienes cuenta? <a>Inicia sesion</a></label>
+					<label id="label1">¿Ya tienes cuenta? <a href="./login.html">Inicia sesion</a></label>
 
 					<label id="label2">Al crear una cuenta y suscribirte, confirmas que has leído
-						la <a>Política de privacidad</a> y aceptas las <a>Condiciones de 
+						la <a href="./politicas.html#privacidad">Política de privacidad</a> y aceptas las <a href="./politicas.html#condiciones">Condiciones de 
 							venta</a>.</label>
-				</form>
+					</div>
 
 			</section>
 

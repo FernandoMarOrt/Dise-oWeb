@@ -9,6 +9,107 @@ div#contenido{
     flex-direction: column;
 }
 
+
+
+div#menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+div#menu>header#cabeceramenu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#logo-compra{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 80%;
+    border: 1px solid grey;
+    border-right: none;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#home{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 10%;
+    border: 1px solid grey;
+    padding: 0.25rem;
+    justify-content: center;
+    border-right: none;
+}
+
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#home>a>img{
+    width: 30px;
+    margin: 0.31rem;
+  
+}
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#cerrar{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 10%;
+    border: 1px solid grey;
+    padding: 0.25rem;
+    justify-content: center;
+}
+
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#cerrar>img{
+    transform: rotate(-45deg);
+    width: 44px;
+}
+/*FIN CABECERA*/
+
+
+/*CUERPO*/
+
+div#menu>div#cuerpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#menu>div#cuerpo>div#secciones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div#menu>div#cuerpo>div#secciones>*{
+  flex-basis: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+/*FIN CUERPO*/
+
+
+
+
+
+
 /*CABECERA*/
 div#contenido>header#cabecera{
     display: flex;
@@ -42,36 +143,36 @@ main{
     flex-wrap: wrap;
 }
 
-main>section#cuerpo{
+main>section#cuerpomain{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 1rem;
 }
 
-main>section#cuerpo>h1{
+main>section#cuerpomain>h1{
     text-align: left;
     padding: 1rem;
 }
 
-main>section#cuerpo>form{
+main>section#cuerpomain>div{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 1rem;
 }
 
-main>section#cuerpo>form>*{
+main>section#cuerpomain>div>*{
     padding: 1rem;
     margin: 0.5rem 0 0.5rem 0;
 }
 
-main>section#cuerpo>form>input{
+main>section#cuerpomain>div>input{
     border:1px solid grey;
 }
 
 
-main>section#cuerpo>form>p{
+main>section#cuerpomain>div>p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -80,11 +181,11 @@ main>section#cuerpo>form>p{
     padding-left: 0;
 }
 
-main>section#cuerpo>form>p:nth-child(3){
+main>section#cuerpomain>div>p:nth-child(3){
     color: grey;
 }
 
-main>section#cuerpo>form>button#iniciar-sesion{
+main>section#cuerpomain>div>button#iniciar-sesion{
     color: white;
     background-color: black;
     cursor: pointer;
@@ -93,7 +194,7 @@ main>section#cuerpo>form>button#iniciar-sesion{
 }
 
 
-main>section#cuerpo>form>button#crear-cuenta{
+main>section#cuerpomain>div>button#crear-cuenta{
     color: black;
     background-color: white;
     cursor: pointer;
@@ -102,7 +203,7 @@ main>section#cuerpo>form>button#crear-cuenta{
 }
 
 
-main>section#cuerpo>form>a{
+main>section#cuerpomain>div>a{
     color: black;
     text-align: center;
 }

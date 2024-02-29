@@ -6,9 +6,56 @@
 	<meta name="lang" content="es-ES">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<link rel="STYLESHEET" type="text/css" href="./css/politicas.css">
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="./js/jquery.animate-colors-min.js"></script>
+	<script src="./js/scripts.js"></script>
 </head>
 <body>
 	<div id="contenido">
+		<div id="menu">
+			<header id="cabeceramenu">
+				<nav id="cabecera-principalmenu">
+					<div id="logo-compra">
+						<a href="main.html"><img src="./img/logo.png" width="35" alt="logo"></a>
+						<h1>SECCIONES</h1>
+					</div>
+					<div id="home">
+						<a href="main.html"><img src="./img/svg/home.svg" alt="home"></a>
+					</div>
+					<div id="cerrar">
+						<img src="./img/svg/x.svg" alt="X">
+					</div>
+				</nav>
+			</header>
+	
+	
+			<div id="cuerpo">
+				<div id="secciones">
+					<a href="novedades.html">
+						<p>NOVEDADES</p>
+					</a>
+					<a href="ofertas.html">
+						<p>OFERTAS</p>
+					</a>
+					<a href="mas-vendidos.html">
+						<p>MAS VENDIDOS</p>
+					</a>
+					<a href="colecciones.html">
+						<p>COLECCIONES</p>
+					</a>
+					<a href="camisetas.html">
+						<p>CAMISETAS</p>
+					</a>
+					<a href="opiniones.html">
+						<p>OPINIONES</p>
+					</a>
+					<a href="informacion.html#sobrenosotros">
+						<p>¿QUIENES SOMOS?</p>
+					</a>
+				</div>
+	
+			</div>
+		</div>
 		<header id="cabecera">
 			<nav id="cabecera-principal">
 				<img src="./img/svg/menu.svg" alt="menu">
@@ -49,22 +96,55 @@
 
 		<footer>
 			<div id="informacion">
-                <h2>PREGUNTAS FRECUENTES</h2>
-				<h2>ESTADO DE MI PEDIDO</h2>
-				<h2>DEVOLUCIONES</h2>
-				<h2>AYUDA</h2>
-				<h2>OPINIONES</h2>
-				<h2>SOBRE NOSOTROS</h2>
-
+				<a href="preguntas.html"><h2>PREGUNTAS FRECUENTES</h2></a>
+				<a href="informacion.html#estado"><h2>ESTADO DE MI PEDIDO</h2></a>
+				<a href="informacion.html#devoluciones"><h2>DEVOLUCIONES</h2></a>
+				<a href="informacion.html#ayuda"><h2>AYUDA</h2></a>
+				<a href="preguntas.html"><h2>OPINIONES</h2></a>
+				<a href="informacion.html#sobrenosotros"><h2>SOBRE NOSOTROS</h2></a>
 			</div>
 			<div id="desplegables">
 				<div id="pagos">
 					<h2>METODOS DE PAGO</h2>
-					<img src="./img/svg/flechabaja.svg" alt="flechabaja">
+					<img id="flechapago" src="./img/svg/flechabaja.svg" alt="flechabaja">
+				</div>
+				<div id="metodospagos">
+					<img src="./img/svg/visa.svg" alt="visa">
+					<img src="./img/svg/mastercard.svg" alt="mastercard">
+					<img src="./img/svg/americanex.svg" alt="americanex">
+					<img src="./img/svg/applepay.svg" alt="applepay">
+					<img src="./img/svg/googlep.svg" alt="googlep">
+					<img src="./img/svg/bizum.svg" alt="bizum">
+					<img src="./img/svg/paypal.svg" alt="paypal">
+					<img src="./img/svg/clientcard.svg" alt="clientcard">
 				</div>
 				<div id="contacto">
 					<h2>CONTACTO</h2>
-					<img src="./img/svg/flechabaja.svg" alt="flechabaja">
+					<img id="flechacontacto" src="./img/svg/flechabaja.svg" alt="flechabaja">
+				</div>
+				<div id="formulariocontacto">
+					<form>
+
+						<input type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+						<input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+
+						<input type="email" id="email" name="email" placeholder="Email">
+
+						<div id="telefono">
+							<select name="prefijo" id="prefijo">
+								<option value="opcion1">+34</option>
+								<option value="opcion2">+35</option>
+								<option value="opcion3">+36</option>
+							</select>
+							<input type="text" name="telefono" placeholder="Móvil">
+						</div>
+
+						<textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aqui"></textarea>
+
+						<button type="submit">Enviar</button>
+
+					</form>
 				</div>
 			</div>
 			<div id="caja-negra">
