@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>FORMULARIO</h1>
+        <form>
+
+            <div>
+                <input type="text" placeholder="Nombre" required>
+                <p class="errores">RELLENA ESTE CAMPO POR FAVOR</p>
+            </div>
+
+            <div>
+                <input type="email" placeholder="Email" required>
+                <p class="errores">RELLENA ESTE CAMPO POR FAVOR</p>
+            </div>
+
+            <div>
+
+                <textarea rows="5" placeholder="Describete" maxlength="100" required></textarea>
+
+                <p class="errores">RELLENA ESTE CAMPO POR FAVOR</p>
+
+                <p id="ncaracteres">Has escrito 0 caracteres de 100</p>
+
+            </div>
+
+            <div>
+                <p id="plugin">JQuery DatePicker</p>
+                <input type="text" id="fechas" placeholder="Elige una fecha">
+            </div>
+
+            <div>
+                <button id="btnError">ENVIAR</button>
+            </div>
+           
+        </form>
+
+    </main>
+</body>
+
+</html>
