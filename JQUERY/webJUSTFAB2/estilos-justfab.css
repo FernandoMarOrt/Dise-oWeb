@@ -2,8 +2,13 @@
     box-sizing: border-box;
 }
 
-/*Comenzamos con la versión móvil*/
-/*Hacemos el cuerpo de la web flexible*/
+.btnCompra {
+    background-color: red;
+
+}
+
+
+
 body {
     font-size: 16px;
     margin: 0;
@@ -31,19 +36,6 @@ div#oscuro {
     display: none;
 }
 
-a>span.compra {
-    position: absolute;
-    bottom: 0;
-    z-index: 20;
-    background-color: #222222;
-    color: white;
-    border: 0;
-    padding: 1rem 0;
-    width: 100%;
-    display: none;
-    cursor: pointer;
-    transition: background-color .3s linear;
-}
 
 a>span.compra:hover {
     background-color: black;
@@ -78,7 +70,6 @@ header#top {
 header#top>div {
     order: 1;
     flex: 100%;
-
     display: flex;
     align-items: center;
     box-shadow: 2px 1px 10px #888888;
@@ -351,23 +342,3 @@ div#volverarriba>a {
     padding: 0.2rem 1rem;
 }
 
-/* Boton de compra */
-
-#desplazable>main>article.item>button {
-    display: none;
-    width: 10rem;
-    height: 40px;
-    position: absolute;
-    z-index: 50;
-    top: 40px;
-    left: calc(50% - 5rem);
-    background-color: #DEDEDE;
-    border: 1px solid black;
-    border-radius: .25rem;
-
-    &:hover {
-        background-color: #BBB;
-    }
-}
-
-/* Fin boton de compra */

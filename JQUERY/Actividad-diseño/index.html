@@ -20,24 +20,21 @@
     <script>
 
         $(document).ready(function () {
-            $(document).on("scroll", function () {
 
-                if (desplazamientoActual > 200) {
-                    $("header").addClass('.header');
-                } else {
-                    $("header").css("position", "static");
+
+            $("article.item a:last-child .comprar").hide(); //Escondo el boton al principio
+
+            $(window).on("scroll", function () {
+                if ($(this).scrollTop() > 50 && $("#volverarriba").css("display") === "none") {
+
+                    $('#volverarriba').css("display", "block")
+
+                } else if ($(this).scrollTop() < 50) {
+                    $('#volverarriba').css("display", "none")
                 }
-
-                if ($(document).scrollTop() > 400 && $("#volverarriba").css("display") == "none") {
-                    controlArriba.fadeIn(300);
-                }
-
-                if ($(document).scrollTop() < 400 && $("#volverarriba").css("display") == "block") {
-                    controlArriba.fadeOut(300);
-                }
-
 
             });
+
 
             $("nav#menu-principal>span").on({
 
@@ -62,53 +59,36 @@
                 }
             })
 
-            $("ul#menu>li>a").on({
-                click: function () {
-                    if ($(this).next().css("display") === "none") {
-                        $("ul#menu>li>ul").css("display", "none");
-                        $("ul#menu>li>a").find("i").css({
-                            "transform": "rotate(0)",
-                            "transition": "transform .25s ease ",
-                        });
-                        $(this).next().fadeIn();
-                        $(this).find("i").css({
-                            "transform": "rotate(180deg)",
-                            "transition": "transform .25s ease ",
-                        });
-                    } else {
-                        $(this).next().fadeOut();
-                        $(this).find("i").css({
-                            "transform": "rotate(0deg)",
-                            "transition": "transform .25s ease ",
-                        });
-                    }
-                }
-            })
 
-            $('article.item img').on({
-                mouseenter: function () {
-                    var $img = $(this);
-                    $img.data('timeout', setTimeout(function () {
-                        $img.attr("src", $img.attr('src').replace('.jpg', '-1.jpg'));
-                    }, 400));
-                }
-            });
+            let svg = $(this).find('.fa-angle-down');
 
-            $('article.item img').on({
-                mouseleave: function(){
-                var $img = $(this);
-                clearTimeout($img.data('timeout'));
-                $img.attr("src", $img.attr('src').replace('-1.jpg', '.jpg'));}
+            $('ul#menu > li').on('click', function () {
+                $('ul#menu > li').find('.fa-angle-down').css({ transform: 'rotate(0deg)', transition: 'transform 0.5s ease' });
+
+                $('ul#menu > li').not(this).children('ul').slideUp();
+
+                if ($(this).children('ul').is(':hidden')) {
+                    $(this).children('ul').slideDown();
+                    svg.css({ transform: 'rotate(180deg)', transition: 'transform 0.5s ease' });
+                } else {
+                    //Vuelvo a la normalidad
+                    $(this).children('ul').slideUp();
+                    svg.css({ transform: 'rotate(0deg)', transition: 'transform 0.5s ease' });
+                }
+
             });
 
 
-            $("#volverarriba").on({
-                click: function () {
-                    $(document).scrollTop(0);
-                }
-            })
+            $('article.item img').on('mouseenter', function () {
+                $(this).stop(true, true).delay(1000).queue(function () {
+                    $(this).attr("src", $(this).attr('src').replace('.jpg', '-1.jpg'));
+                })
+            });
 
-            $("article.item a:last-child .comprar").hide();
+            $('article.item img').on('mouseleave', function () {
+                $(this).stop(true, true).attr("src", $(this).attr('src').replace('-1.jpg', '.jpg'));
+            });
+
 
 
             $("article.item").on({
@@ -271,10 +251,9 @@
                     <h3>XARENI ADVOCAT</h3>
                 </a>
                 <p>145€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato1.jpg" alt="ZAPATO XARENI ADVOCAT" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
 
             </article>
@@ -283,10 +262,9 @@
                     <h3>COSTA RICA</h3>
                 </a>
                 <p>145€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -294,10 +272,9 @@
                     <h3>VALS</h3>
                 </a>
                 <p> 139€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -305,10 +282,9 @@
                     <h3>XARENI ADVOCAT</h3>
                 </a>
                 <p>145€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato1.jpg" alt="ZAPATO XARENI ADVOCAT" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -316,10 +292,9 @@
                     <h3>COSTA RICA</h3>
                 </a>
                 <p>145€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -327,10 +302,9 @@
                     <h3>VALS</h3>
                 </a>
                 <p> 139€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -338,10 +312,9 @@
                     <h3>COSTA RICA</h3>
                 </a>
                 <p>145€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -349,10 +322,9 @@
                     <h3>VALS</h3>
                 </a>
                 <p> 139€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -360,10 +332,9 @@
                     <h3>COSTA RICA</h3>
                 </a>
                 <p>145€</p>
-                <button>Comprar</button>
                 <a href="#">
                     <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
             <article class="item">
@@ -374,7 +345,7 @@
 
                 <a href="#">
                     <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
-                    <span class="comprar">COMPRAR</span>
+                    <p class="btnCompra">COMPRAR</p>
                 </a>
             </article>
         </main>
