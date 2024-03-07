@@ -45,30 +45,40 @@ acumulación de efectos. Haz esto también al hacer scroll en el documento
 desplegar el submenú asociado con un efecto de desplazamiento desde la 
 izquierda. Además, el icono + debe transformarse en el icono -. Al volver a hacer 
 clic sobre el icono -, se debe realizar el efecto contrario y el - cambiarse por un +. */
+$(document).ready(function() {
+    // Al hacer clic sobre la opción del menú “Alfombras Vinílicas”
     $('#menu-toggle>li').has('ul').on('click', function () {
         var ulElement = $(this).children('ul');
         var spanElement = $(this).children('span');
 
         // Si el UL actualmente está abierto
-        if (ulElement.css('display') === 'none') {
+        if (ulElement.is(':visible')) {
             // Cierra el UL actual y cambia el texto del span
-            $('#menu-toggle>li>ul').slideUp('slow');
-
-
-            // Abre el nuevo UL y cambia el texto del span
-            ulElement.slideDown('slow');
-            spanElement.text('-');
-        } else {
-            // Cierra el UL y cambia el texto del span
             ulElement.slideUp('slow');
             spanElement.text('+');
+        } else {
+            // Cierra todos los UL y cambia los textos de los span
+            $('#menu-toggle>li>ul').slideUp('slow');
+            $('#menu-toggle>li>span').text('+');
+
+            // Abre el nuevo UL desde la izquierda con un efecto de desplazamiento y cambia el texto del span
+            ulElement.css({left: '-50vw', display: 'block'}).animate({left: 0}, 'slow');
+            spanElement.text('-');
         }
     });
+});
+
+
+
 /**f) (0,5puntos) Al redimensionar la ventana se tiene que borrar todo el código 
 insertado en tiempo de ejecución asociado al menú para evitar fallos. Utiliza para 
 ello el método removeAttr. */
 
+$(window).resize(function () {
+    $("#menu-toggle").removeAttr("style");
+    $("span.line-ham").removeAttr("style");
 
+});
 
 
 
@@ -77,11 +87,11 @@ ello el método removeAttr. */
 a) (0,25 puntos) Al cargar la página, la barra social aparece en el lateral derecho con 
 un efecto de cambio de opacidad. */
    
-    $('#chat').show(2000)
+    $('#chat').fadeIn(2000)
     
     /**b) (0,25 puntos) Al cargar la página, la pestaña del chat aparece en la parte inferior 
 izquierda con un efecto de cambio de opacidad */
-    $('#barra-social').show(2000)
+    $('#barra-social').fadeIn(2000)
 
     /**c) (0,5 puntos) Al hacer clic sobre la pestaña del chat debe aparecer la ventana del 
 chat completa con un efecto de persiana deslizante hacia arriba. 
@@ -110,11 +120,11 @@ compra desaparece con un efecto deslizante hacia arriba. */
     $('.producto').on({
         mouseenter: function () {
             let compra = $(this).children('a');
-            compra.show(1000)
+            compra.show()
         },
         mouseleave: function () {
             let compra = $(this).children('a');
-            compra.hide('slow')
+            compra.slideUp('slow')
         }
     })
 })
@@ -142,16 +152,61 @@ página con un efecto de animación. La cabecera debe recuperar su estado inicia
 la flecha debe desaparecer con un efecto de cambio de opacidad.*/
 
 
+$(window).on("scroll", function(){
+
+    if($(this).scrollTop()>50){
+        $("#go-up").show()
+        $("#home-header").css({
+            position: "fixed",
+            width: "100%",
+            opacity: "0.7",
+        })
+    }else{
+        $("#go-up").fadeOut(1000)
+        $("#home-header").css({
+            position: "",
+            width: "",
+            opacity: "",
+        })
+    }
+
+})
+
+$(document).ready(function(){
+    $("#go-up").click(function(){
+        $("html").animate({
+            scrollTop:0
+        },500)
+    })
+})
 
 
 
+/*(1 punto) FORMULARIO 
+a) (0,5puntos) En el formulario del chat, cuando un campo requerido pierda el foco se 
+debe comprobar si la longitud de dicho campo es 0. En caso afirmativo, debe 
+aparecer debajo de cada input, dentro de la etiqueta span, un mensaje en rojo 
+indicando este error. Cuando aparezca un nuevo error no se deben borrar los 
+anteriores. 
+b) (0,5puntos) El textarea del formulario tiene una limitación de 100 caracteres. Haz 
+que cada vez que se inserte un nuevo carácter, se informe al usuario del número 
+de caracteres restantes con un mensaje con el siguiente: “Dispone de 32 
+caracteres”. */ 
 
-/** (1,5 puntos) FLECHA y CABECERA
-a) (0,5 puntos) Al hacer un poco de scroll sobre la página aparecerá la flecha “go-up” 
-en la parte inferior derecha con un efecto de cambio de opacidad. Controla la 
-acumulación de efectos.
-b) (0,5 puntos) Además, al hacer scroll, la cabecera quedará en una posición fija en 
-la parte superior con algo de opacidad. Controla la acumulación de efectos.
-c) (0,5 puntos) Al hacer clic sobre la flecha, nos posicionamos al principio de la 
-página con un efecto de animación. La cabecera debe recuperar su estado inicial y 
-la flecha debe desaparecer con un efecto de cambio de opacidad.*/
+
+$(document).ready(function(){
+    
+    $("input, textarea").focusin(function(){
+        $(this).siblings(".error-chat").hide();
+    });
+    
+    $("input, textarea").focusout(function(){
+        if($(this).val().trim().length === 0){
+            $(this).siblings(".error-chat").show();
+        }
+        else {
+            $(this).siblings(".error-chat").hide();
+        }
+    });
+
+});
