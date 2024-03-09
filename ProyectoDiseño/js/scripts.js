@@ -15,6 +15,8 @@ $(document).ready(function () {
     let avisoCookies = "div#contenido>main>div#avisocookies"
     let aceptarCookies = "div#contenido>main>div#avisocookies>div>button:nth-child(1)"
 
+
+
     //Redirecciones para los clicks en imagenes
     $("#iniciar-sesion").on({
         click: function () {
@@ -144,4 +146,10 @@ $(document).ready(function () {
     $(filtrosSelector).hide();
     $("#metodospagos").hide();
     $("#formulariocontacto").hide();
+   
+
+
+
+
+
 });
