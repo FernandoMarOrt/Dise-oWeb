@@ -9,34 +9,37 @@
 </head>
 
 <body>
-    <div id="videoPlayer">
-        <video id="miVideo" src="video/trailer.mp4"></video>
-        <div id="controles">
-            <button id="reproducirPausar"><img alt="playPause"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAl0lEQVRIS2NkoDFgpLH5DKMWEAzhAQ+iDUAnFgDxA4JOxaGAkA/+A/V9AOIJQNxIjiXEWAAzF+SLRCA+QIpFpFgAMxcUbIXEBhs5FoAsIjrYyLWA6GCj1IKHQJsS8MULuRZ8hKasBkIRTo4FG0nJG6RYQDA4sPmGGAuIDg5yLKB5UUEoDgnKEwoiggYQUjBqAaEQon2lDwCCBSIZQeNI9AAAAABJRU5ErkJggg=="></button>
-            <label id="tiempoReproduccion">0:00 / 0:00</label>
-            <button id="parar"><img alt="parar"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAQ0lEQVRIS2NkoDFgpLH5DKMWEAzh4R9E/wmGAUQBzpAgFESjFhDMaKNBNBpE8GxIdkYjMiPjVkYoJ49aQDCZjgYRAwCY5goZ7Uc3bwAAAABJRU5ErkJggg=="></button>
-
-            <button id="disminuirVelocidad"><img alt="minus" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAQ0lEQVRIS2NkoDFgpLH5DKMWEAzh0SAaDSKCIUBQAa5U9J+gTuwKMMwbMAvI9ACmttGMRjAoR4NoNIgIhgBBBTRPRQDD2wIZyGngoQAAAABJRU5ErkJggg=="></button>
-            <label>Velocidad</label>
-            <button id="aumentarVelocidad"><img alt="plus" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAVklEQVRIS2NkoDFgpLH5DKMWEAxhUoPoP9REovURrRBq8KgFBONs6AQRzKUEvYSmACPR4EpFNLcAl8uHThyM+gAeAoOuLCI1X4zWaIRDjNRIJmwimgoAXLQOGcM4De4AAAAASUVORK5CYII="></button>
-
-
-
-            <button id="silenciar"> <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABLUlEQVRIS9VV7RHBQBCVCpQgKkAHlKCD6EAH0gEqEB3ogA7QAR3ogPdMLvNmXeYuJD/szM595Hbfvt29S9LrWJKO/fe+BcgRGDUoTQHG8LiDcnS2J8yX0IsPrQkAI16JE2f7LPcWGAsLEgOgUau9s82wuYH2oR8gIQAbtQ+AewziXH6cYWTa3qIAU6yZ39SXS8+eMmBqWIc19AYd+gD4YRDpXINjDeiQ9s7HHPODZeCKFYuhRd6WDByLPdZZmwBs0QmUaT5qmrQGvzCwKavWfwNwRchsVZeiO+ZpmzWIKvIDiLyNsaJdFNWmpFdAY+9C3UWr0mNT5Is8x6Y+cHpGGyTqqahLDY3JbGQOKAM+MZTGj536tGxae64VRNm0/sOxbMgoKKH/QdBB6EDnAC+x1kYZ4CP93gAAAABJRU5ErkJggg=="
-                    alt="Audio"></button>
-            <input type="range" id="volumen" value="100" max="100" step="1">
-            <button id="retroceder"><img alt="retroceder"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAnklEQVRIS+2TWwrAIAwE9aS1N2tP2po+IETNJqh/CkIxZYbENYbJK07mhyWAE/aM6Mi0K++9Qm3WrAICbB+YvrlEq5kumQPIceadmOwXy9rzC+qgC44E3XBNMATeEgyDWwU8NVIuE1UkuHXJGsgl0VI0ROKNqXtcSEAz7erEIpAS/pJRDb5kngrqhFYqovJ2Wa1ZO6gwbUdLAOc0fUQ30BM2GSMCjMcAAAAASUVORK5CYII="></button>
-            <button id="adelantar"><img alt="adelantar"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAnElEQVRIS+2UQRKAIAwD5WX6E/Vl6k+ljocOlESk3HDGiwlZjMUwdb5C5/xpAGjDpYq2uHKO924kIC2zWwAJOF7nmUCQZr6NBZDQVbk1BGmfAWJ0g6AxdYGwc9AMYYDmuv4ArkiVabLgWnsMDJBWVBXOAM3hCOASXgK4hZcA+neQfjSkVZ1kCVrUtOjFSMsgbIrMXdU8HADaVveKbs1QNBn3CPODAAAAAElFTkSuQmCC"></button>
-            <button id="pantallaCompleta"><img alt="pantallaCompleta"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAX0lEQVRIS2NkoDFgpLH5DHS34D8eH6E7hii1ZGmCOoIiC8gNOpilcP24fDBqwcAFEdXzHbmRSbRDhp8FGBmF6LCAKBzNaAQDbPAEETanklW0k6WJkvqAYCCTqmDo52QALsQcGSF8WtwAAAAASUVORK5CYII="></button>
-
+        <div id="bodyvideo">
+                <div id="videoPlayer">
+                        <video id="miVideo" src="video/trailer.mp4"></video>
+                        <div id="controles">
+                            <button id="reproducirPausar"><img alt="playPause"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAl0lEQVRIS2NkoDFgpLH5DKMWEAzhAQ+iDUAnFgDxA4JOxaGAkA/+A/V9AOIJQNxIjiXEWAAzF+SLRCA+QIpFpFgAMxcUbIXEBhs5FoAsIjrYyLWA6GCj1IKHQJsS8MULuRZ8hKasBkIRTo4FG0nJG6RYQDA4sPmGGAuIDg5yLKB5UUEoDgnKEwoiggYQUjBqAaEQon2lDwCCBSIZQeNI9AAAAABJRU5ErkJggg=="></button>
+                            <label id="tiempoReproduccion">0:00 / 0:00</label>
+                            <button id="parar"><img alt="parar"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAQ0lEQVRIS2NkoDFgpLH5DKMWEAzh4R9E/wmGAUQBzpAgFESjFhDMaKNBNBpE8GxIdkYjMiPjVkYoJ49aQDCZjgYRAwCY5goZ7Uc3bwAAAABJRU5ErkJggg=="></button>
+                
+                            <button id="disminuirVelocidad"><img alt="minus" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAQ0lEQVRIS2NkoDFgpLH5DKMWEAzh0SAaDSKCIUBQAa5U9J+gTuwKMMwbMAvI9ACmttGMRjAoR4NoNIgIhgBBBTRPRQDD2wIZyGngoQAAAABJRU5ErkJggg=="></button>
+                            <label>Velocidad</label>
+                            <button id="aumentarVelocidad"><img alt="plus" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAVklEQVRIS2NkoDFgpLH5DKMWEAxhUoPoP9REovURrRBq8KgFBONs6AQRzKUEvYSmACPR4EpFNLcAl8uHThyM+gAeAoOuLCI1X4zWaIRDjNRIJmwimgoAXLQOGcM4De4AAAAASUVORK5CYII="></button>
+                
+                
+                
+                            <button id="silenciar"> <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABLUlEQVRIS9VV7RHBQBCVCpQgKkAHlKCD6EAH0gEqEB3ogA7QAR3ogPdMLvNmXeYuJD/szM595Hbfvt29S9LrWJKO/fe+BcgRGDUoTQHG8LiDcnS2J8yX0IsPrQkAI16JE2f7LPcWGAsLEgOgUau9s82wuYH2oR8gIQAbtQ+AewziXH6cYWTa3qIAU6yZ39SXS8+eMmBqWIc19AYd+gD4YRDpXINjDeiQ9s7HHPODZeCKFYuhRd6WDByLPdZZmwBs0QmUaT5qmrQGvzCwKavWfwNwRchsVZeiO+ZpmzWIKvIDiLyNsaJdFNWmpFdAY+9C3UWr0mNT5Is8x6Y+cHpGGyTqqahLDY3JbGQOKAM+MZTGj536tGxae64VRNm0/sOxbMgoKKH/QdBB6EDnAC+x1kYZ4CP93gAAAABJRU5ErkJggg=="
+                                    alt="Audio"></button>
+                            <input type="range" id="volumen" value="100" max="100" step="1">
+                            <button id="retroceder"><img alt="retroceder"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAnklEQVRIS+2TWwrAIAwE9aS1N2tP2po+IETNJqh/CkIxZYbENYbJK07mhyWAE/aM6Mi0K++9Qm3WrAICbB+YvrlEq5kumQPIceadmOwXy9rzC+qgC44E3XBNMATeEgyDWwU8NVIuE1UkuHXJGsgl0VI0ROKNqXtcSEAz7erEIpAS/pJRDb5kngrqhFYqovJ2Wa1ZO6gwbUdLAOc0fUQ30BM2GSMCjMcAAAAASUVORK5CYII="></button>
+                            <button id="adelantar"><img alt="adelantar"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAnElEQVRIS+2UQRKAIAwD5WX6E/Vl6k+ljocOlESk3HDGiwlZjMUwdb5C5/xpAGjDpYq2uHKO924kIC2zWwAJOF7nmUCQZr6NBZDQVbk1BGmfAWJ0g6AxdYGwc9AMYYDmuv4ArkiVabLgWnsMDJBWVBXOAM3hCOASXgK4hZcA+neQfjSkVZ1kCVrUtOjFSMsgbIrMXdU8HADaVveKbs1QNBn3CPODAAAAAElFTkSuQmCC"></button>
+                            <button id="pantallaCompleta"><img alt="pantallaCompleta"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAX0lEQVRIS2NkoDFgpLH5DHS34D8eH6E7hii1ZGmCOoIiC8gNOpilcP24fDBqwcAFEdXzHbmRSbRDhp8FGBmF6LCAKBzNaAQDbPAEETanklW0k6WJkvqAYCCTqmDo52QALsQcGSF8WtwAAAAASUVORK5CYII="></button>
+                
+                        </div>
+                    </div>
         </div>
-    </div>
+   
 
     <script src="script.js"></script>
 </body>

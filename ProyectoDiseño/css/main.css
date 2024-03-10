@@ -1093,6 +1093,64 @@ h1.textoIzquierda {
     margin-left: -1rem;
 }
 
+/*CSS VIDEO */
+
+
+
+div#bodyvideo {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+div#bodyvideo>div#videoPlayer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+}
+
+div#bodyvideo>div#videoPlayer>#controles {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0 0.5rem 0;
+    width: 100%;
+}
+
+div#bodyvideo>div#videoPlayer>#controles>button, input {
+    margin: 5px;
+    background-color: white;
+    border-radius: 30%;
+    
+}
+div#bodyvideo>div#videoPlayer>#controles>label{
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1666,6 +1724,11 @@ div#contenido>footer>div#caja-negra>div#idioma>div>img {
         margin-left: 0rem;
     }
 
+
+    /*APARECE VIDEO EN INFORMACION EN EL APARTADO SOBRE NOSOTROS*/
+    div#bodyvideo>div#videoPlayer {
+        display: block;
+    }
 
     /*ADAPTACION COMPRA CAMISETAS*/
 
