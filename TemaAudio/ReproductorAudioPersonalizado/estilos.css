@@ -1,24 +1,102 @@
-body {
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    flex: 1;
+    max-width: 2.5rem;
+}
+
+div#reproductor {
+    background-color: black;
+    max-width: 40rem;
+    min-width: 40rem;
+    border-radius: 1rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
+    align-self: center;
+}
+
+div#reproductor button svg {
+    fill: white;
+}
+
+div#reproductor button.play svg#pause {
+    display: none;
+}
+
+div#reproductor button.pause svg#play {
+    display: none;
+}
+
+
+div#reproductor div#caja-tiempo {
+    display: flex;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
+    align-items: center;
+    flex: 5;
+
 }
 
-#reproductorAudio {
-    text-align: center;
-    background-color: white;
-    border: 2px solid black;
-    padding: 0.5em;
+span {
+    color: white;
+    font-size: 0.8rem;
+    line-height: 1rem;
 }
 
-img{
+
+div#reproductor div#caja-volumen {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+
+}
+    
+div#reproductor input[type="range"] {
+    appearance: none;
+    background: transparent;
     cursor: pointer;
-    padding: 0.2em;
+    flex: 10rem 0;
+
+
+    &::-webkit-slider-thumb {
+        background-color: white;
+    }
+
+    &:hover::-webkit-slider-thumb {
+        background-color: #DDD;
+    }
+
+    &::-moz-range-track {
+        height: 0.5rem;
+        border-radius: 20rem;
+        background: #8FAAB5;
+        background: linear-gradient(to right, blue calc(var(--value) * 1%), white 0);
+    }
+
+    &:hover::-moz-range-thumb {
+        background-color: #DDD;
+    }
 }
 
-#progreso{
-    padding-bottom: 1em;
+
+div#reproductor button.muted svg#unmuted {
+    display: none;
 }
 
+div#reproductor button.unmuted svg#muted {
+    display: none;
+}
+
+div#reproductor button.loop svg,
+div#reproductor button.acelerado svg {
+    fill: blue;
+    &:hover {
+        fill: blue;
+    }
+}

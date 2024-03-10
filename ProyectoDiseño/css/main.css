@@ -274,6 +274,7 @@ div#contenido>main>div#avisocookies {
     text-align: justify;
     position: absolute;
     top: 30rem;
+    max-width: 400px;
 }
 
 div#contenido>main>div#avisocookies>div {
@@ -550,7 +551,7 @@ main>section#cuerpomain>div>label#label2 {
 
 /*CUERPO CESTA*/
 
-div#contenido>main {
+div#contenido>main#mainCesta {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -627,7 +628,7 @@ div#contenido>main>div.camisetascompradas>div.texto>div>div.divhr {
 
 div#contenido>main>div.camisetascompradas>div.texto>div.titulo>img {
     height: 20px;
-    flex-basis: 0%;
+    flex-basis: 10%;
     border: none;
     cursor: pointer;
 }
@@ -644,21 +645,27 @@ div#contenido>main>div.camisetascompradas>div.texto>div>p.referencia {
 
 /*PIE CESTA*/
 
-div#contenido>footer#footerC {
+footer#footerC {
+    display: flex;
+    flex-direction: column;
+}
+
+footer#footerC>div {
     display: flex;
     flex-direction: column;
     background-color: black;
     color: white;
-    padding: 2rem 0 2rem 0;
     border-radius: 10% 10% 0 0;
+    padding: 2rem 0 2rem 0;
 }
 
-div#contenido>footer#footerC>* {
+
+div#contenido>footer#footerC>div>* {
     font-weight: bold;
     padding: 0 5rem 0 5rem;
 }
 
-div#contenido>footer#footerC>div#textototal {
+div#contenido>footer#footerC>div>div#textototal {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -666,28 +673,28 @@ div#contenido>footer#footerC>div#textototal {
     justify-content: space-between;
 }
 
-div#contenido>footer#footerC>div#textototal>div#textototal2 {
+div#contenido>footer#footerC>div>div#textototal>div#textototal2 {
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
 }
 
 
-div#contenido>footer#footerC>div#textototal>div#textototal2>p:nth-child(1) {
+div#contenido>footer#footerC>div>div#textototal>div#textototal2>p:nth-child(1) {
     font-size: 20px;
 }
 
-div#contenido>footer#footerC>div#textototal>div#textototal2>p:nth-child(2) {
+div#contenido>footer#footerC>div>div#textototal>div#textototal2>p:nth-child(2) {
     font-size: 10px;
 }
 
 
-div#contenido>footer#footerC>div#textototal>div#precio {
+div#contenido>footer#footerC>div>div#textototal>div#precio {
     flex-basis: 30%;
     text-align: center;
 }
 
-div#contenido>footer#footerC>div#textototal>div#precio>p {
+div#contenido>footer#footerC>div>div#textototal>div#precio>p {
     border: 1px solid white;
     text-align: center;
     padding: 0.4rem 0 0.4rem 0;
@@ -695,20 +702,20 @@ div#contenido>footer#footerC>div#textototal>div#precio>p {
 }
 
 
-div#contenido>footer#footerC>div#textoTotal>div#textoTotal2 {
+div#contenido>footer#footerC>div>div#textoTotal>div#textoTotal2 {
     display: flex;
     flex-direction: column;
 
 }
 
-div#contenido>footer#footerC>div#btn {
+div#contenido>footer#footerC>div>div#btn {
     padding-top: 1.5rem;
     flex-basis: 100%;
     align-self: center;
 
 }
 
-div#contenido>footer#footerC>div#btn>button {
+div#contenido>footer#footerC>div>div#btn>button {
     background-color: #5CC777;
     color: white;
     border-radius: 30px;
@@ -774,18 +781,29 @@ div#contenido>main#camisetaM>div#contenedormain>div#imagenesM>div#tiposcamisetas
     cursor: pointer;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#colores {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM {
+    display: flex;
+    flex-direction: column;
+}
+
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>h1 {
+    font-size: 20px;
+    padding-left: 0.8rem;
+}
+
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 1rem;
+    padding-left: 0.8rem;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(1) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(1) {
     flex-basis: 100%;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(2) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(2) {
     background-color: lightgray;
     color: lightgray;
     border: 1px solid black;
@@ -794,7 +812,7 @@ div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(2) {
     cursor: pointer;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(3) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(3) {
     background-color: black;
     color: black;
     border: 1px solid black;
@@ -803,7 +821,7 @@ div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(3) {
     cursor: pointer;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(4) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(4) {
     background-color: white;
     color: white;
     border: 1px solid black;
@@ -812,54 +830,55 @@ div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(4) {
     cursor: pointer;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#tallas {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 1rem;
+    padding-left: 0.8rem;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#tallas>* {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>* {
     border: 1px solid black;
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
     margin: 0.4rem 0.4rem 0 0;
     cursor: pointer;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(1) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(1) {
     flex-basis: 100%;
     border: none;
     padding: 0;
     margin: 0;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(3) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(3) {
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
 }
 
-div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(5) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(5) {
     padding: 0.2rem 0.2rem 0.2rem 0.2rem;
 }
 
-div#contenido>main#camisetaM>hr {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>hr {
     border: 2px solid black;
     margin: 2rem 0 2rem 0;
 }
 
-div#contenido>main#camisetaM>div#añadircesta {
-    padding: 0.5rem 2rem;
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#añadircesta {
+    padding: 0.5rem 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-div#contenido>main#camisetaM>div#añadircesta>input {
-    width: 15%;
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#añadircesta>input {
+    width: 18%;
     padding: 0.5rem;
     font-size: 18px;
 }
 
-div#contenido>main#camisetaM>div#añadircesta>button {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#añadircesta>button {
     padding: 1rem;
     background-color: #5CC777;
     color: white;
@@ -874,7 +893,7 @@ div#contenido>main#camisetaM>div#añadircesta>button {
 
 
 
-div#contenido>main#camisetaM>div#descripcion {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#descripcion {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -882,7 +901,7 @@ div#contenido>main#camisetaM>div#descripcion {
     text-align: justify;
 }
 
-div#contenido>main#camisetaM>div#descripcion>p:nth-child(1) {
+div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#descripcion>p:nth-child(1) {
     flex-basis: 100%;
     padding-bottom: 0.5rem;
     font-size: 20px;
@@ -1447,53 +1466,53 @@ div#contenido>footer>div#caja-negra>div#idioma>div>img {
     /*ADAPTACION COMPRA CAMISETAS*/
 
 
-    div#contenido>main#camisetaM>div#contenedormain>div#colores {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores {
         align-items: center;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#tallas {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas {
         align-items: center;
     }
 
 
-    div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(1) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(1) {
         flex-basis: 0%;
         font-size: 25px;
         padding-right: 1rem;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(2) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(2) {
         padding: 1rem;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(3) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(3) {
         padding: 1rem;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#colores>p:nth-child(4) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(4) {
         padding: 1rem;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(1) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(1) {
         flex-basis: 0%;
         font-size: 25px;
         padding-right: 1.4rem;
 
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(2) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(2) {
         padding: 0.5rem 0.7rem;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(3) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(3) {
         padding: 0.5rem 0.6rem;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(4) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(4) {
         padding: 0.5rem 0.7rem;
     }
 
-    div#contenido>main#camisetaM>div#contenedormain>div#tallas>p:nth-child(5) {
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(5) {
         padding: 0.5rem 0.4rem;
     }
 
@@ -1513,7 +1532,13 @@ div#contenido>footer>div#caja-negra>div#idioma>div>img {
         flex-basis: 48%;
     }
 
+      /*ADAPTACION CESTA*/
+      div#contenido>main#mainCesta {
+        align-self: center;
+        max-width: 700px;
+    }
 
+   
 
 }
 
@@ -1597,6 +1622,7 @@ div#contenido>footer>div#caja-negra>div#idioma>div>img {
     }
 
 
+  
 
     /*ADAPTACION CAMISETAS*/
     div#contenido>main>section>div.mostrarcamisetas {
@@ -1641,8 +1667,253 @@ div#contenido>footer>div#caja-negra>div#idioma>div>img {
     }
 
 
-    /*ADAPTACION PREGUNTAS FRECUENTES*/
+    /*ADAPTACION COMPRA CAMISETAS*/
+
+
+    /*ADAPTO CONTENEDOR DE IMAGENES*/
    
+    div#contenido>main#camisetaM>div#contenedormain {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
     
+    div#contenido>main#camisetaM>div#contenedormain>div#imagenesM {
+        flex-basis: 40%;
+        padding: 5rem;
+    }
+
+
+    div#contenido>main#camisetaM>div#contenedormain>div#imagenesM>img {
+        width: 700px;
+    }
+
+
+
+    /*ADAPTO CONTENEDOR DE ATRIBUTOS*/
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM {
+        flex-basis: 40%;
+        padding: 5rem;
+    }
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>h1 {
+        font-size: 35px;
+    }
+
+    /*ADAPTO CONTENEDOR DE COLORES*/
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores {
+        align-items: center;
+        padding-top: 3rem;
+    }
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(1) {
+       font-size: 35px;
+       flex-basis: 10%;
+       padding-right: 1rem;
+       
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(2) {
+        padding: 1.8rem;
+        margin: 0.8rem 0.8rem 0 0;
+
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(3) {
+        padding: 1.8rem;
+        margin: 0.8rem 0.8rem 0 0;
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#colores>p:nth-child(4) {
+        padding: 1.8rem;
+        margin: 0.8rem 0.8rem 0 0;
+    }
+
+    /*ADAPTO CONTENEDOR DE TALLAS*/
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas {
+        align-items: center;
+        padding-top: 3rem;
+    }
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>* {
+        padding: 0.8rem 1.2rem;
+        margin: 0.8rem 0.8rem 0 0;
+        font-size: 30px;
+    }
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(1) {
+        font-size: 35px;
+       flex-basis: 10%;
+       padding-right: 1.8rem;
+    }
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(2) {
+        padding: 0.8rem 1.2rem;
+    }
+    
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(3) {
+        padding: 0.8rem 1rem;
+    }
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(4) {
+        padding: 0.8rem 1.2rem;
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#tallas>p:nth-child(5) {
+        padding: 0.8rem;
+    }
+
+    .compraOculto{
+        display: none;
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#añadircesta {
+        padding: 4rem 1rem;
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#añadircesta>input {
+        width: 18%;
+        padding: 0.5rem;
+        font-size: 18px;
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#añadircesta>button {
+        padding: 1.5rem;
+        font-size: 30px;
+        border-radius: 40px;
+        
+    }
+
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#descripcion>p:nth-child(1) {
+        font-size: 30px;
+    }
+    
+    div#contenido>main#camisetaM>div#contenedormain>div#atributosM>div#descripcion>p:nth-child(2) {
+        font-size: 20px;
+        padding-top: 1rem;
+    }
+    
+    /*ADAPTACION CESTA*/
+
+    div#contenido>main#mainCesta {
+        align-self: center;
+        max-width: 1000px;
+    }
+    
+div#contenido>main>div.camisetascompradas {
+    border: 2px solid black;
+    padding: 1.5rem;
+    border-radius: 40px;
+    margin: 0.5rem 0;
+}
+
+div#contenido>main>div.camisetascompradas:nth-child(1) {
+    margin-top: 4rem;
+}
+
+
+div#contenido>main>div.camisetascompradas>div.texto {
+    font-size: 20px;
+}
+
+.izquierda {
+    flex-basis: 50%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.derecha {
+    flex-basis: 40%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.borde {
+    border: 1px solid black;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.estilohr {
+    margin: 0.45rem;
+    padding: 0.3rem;
+}
+
+div#contenido>main>div.camisetascompradas>div.texto>div.titulo>p {
+    font-size: 27px;
+}
+
+div#contenido>main>div.camisetascompradas>div.texto>div.titulo>img {
+    height: 30px;
+
+}
+div#contenido>main>div.camisetascompradas>div.texto>div>p.referencia {
+    font-size: 20px;
+}
+
+/*FIN CUERPO CESTA*/
+
+
+/*PIE CESTA*/
+div#contenido>footer#footerC {
+  padding: 0rem 29rem;
+  margin-bottom: 2rem;
+}
+
+div#contenido>footer#footerC>div {
+    border-radius: 40px;
+  }
+  
+
+div#contenido>footer#footerC>div>div#textototal>div#textototal2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    margin-left: 12rem;
+ 
+}
+
+
+div#contenido>footer#footerC>div>div#textototal>div#textototal2>p:nth-child(1) {
+    font-size: 25px;
+}
+
+div#contenido>footer#footerC>div>div#textototal>div#textototal2>p:nth-child(2) {
+    font-size: 15px;
+}
+
+
+div#contenido>footer#footerC>div>div#textototal>div#precio{
+    flex-basis: 20%;
+    margin-right: 12rem;
+
+}
+
+
+div#contenido>footer#footerC>div>div#textototal>div#precio>p {
+    border: 1px solid white;
+    text-align: center;
+    padding: 0.4rem 0 0.4rem 0;
+    font-size: 20px;
+
+}
+
+div#contenido>footer#footerC>div>div#btn>button {
+    background-color: #5CC777;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 1.5rem 6rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 
 }
