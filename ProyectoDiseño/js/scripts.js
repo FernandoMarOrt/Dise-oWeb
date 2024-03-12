@@ -74,17 +74,19 @@ $(document).ready(function () {
     //Para el menu 
     $(clickadoMenu).on({
         click: function () {
-            $(menuDesplegable).show();
+            $(menuDesplegable).slideDown("slow");
             $(lupaBuscador).css("display", "none")
         }
     })
 
     $(clickadoCerrarMenu).on({
         click: function () {
-            $(menuDesplegable).hide();
+            $(menuDesplegable).slideUp("slow");
             $(lupaBuscador).css("display", "")
         }
     })
+
+  
 
     //Para el aviso de cookies
     $(aceptarCookies).on({
@@ -140,6 +142,70 @@ $(document).ready(function () {
             $(filtrosSelector).fadeOut()
         }
     })
+
+
+    /*Cuando hago scroll o cuando se hace resize se cierra el menu*/ 
+
+    $(window).on({
+        scroll: function(){
+            if($(menuDesplegable).css("display") != "none"){
+                $(menuDesplegable).slideUp("slow");
+                /*$("#menu-principal>label>span").animate({"color": "white"},1000)*/
+            }
+        },
+
+        resize: function(){
+            $(menuDesplegable).slideUp("slow");
+        }
+    })
+
+    $(window).on("scroll", function(){
+
+        if($(this).scrollTop()>50){
+            $("#go-up").show()
+            $("#cabecera").css({
+                position: "fixed",
+                width: "100%",
+                opacity: "0.7",
+                backgroundColor: "white",
+                zIndex: "100",
+            })
+        }else{
+            $("#go-up").fadeOut(500)
+            $("#cabecera").css({
+                position: "",
+                width: "",
+                opacity: "",
+            })
+        }
+    
+    })
+
+    //Animacion para cuando clicke en la flechita para subir hacia arriba
+    $(document).ready(function(){
+        $("#go-up").click(function(){
+            $("html").animate({
+                scrollTop:0
+            },500)
+        })
+    })
+
+    $(document).ready(function() {
+        $("input").focusin(function() {
+            $(this).next(".errores").hide(); // Esconde el error
+            $(this).css({"border": "1px solid black"}); // Restaura el borde a su estado inicial
+        });
+    
+        $("input").focusout(function() {
+            if ($(this).val().trim().length === 0) {
+                $(this).next(".errores").show(); // Muestra el error
+                $(this).css({"border": "1px solid red"}); // Cambia el borde solo en el input que falla
+            }
+        });
+    });
+    
+    
+    
 
     //Oculto todo al principio
     $(menuDesplegable).hide();

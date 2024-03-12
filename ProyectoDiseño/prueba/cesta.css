@@ -1,0 +1,590 @@
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+}
+
+div#contenido {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+a#go-up{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	display: none;
+}
+a#go-up > i{
+	font-size: 3rem;
+	color:#2bd3c6;
+	background-color: white;
+	border-radius: 2rem;
+}
+a#go-up > i:hover{
+	cursor:pointer;
+}
+
+.errores{
+    color: red;
+    display: none;
+    font-size: 13px;
+    border: none;
+}
+
+/*Lo que hace el :not() es que no se aplique al selector que tengo entre parentesis*/
+div#contenido>main img:not(img.check):not(div.opinion img) {
+    width: 100%;
+    height: auto;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.oculto{
+    display: none;
+}
+
+/*EMPIEZO MENU*/
+
+
+#menuEscritorio {
+    display: none;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal>nav#buscadorE {
+    display: none;
+    padding: 0 1rem 0 1rem;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal>nav#buscadorE>img#lupa2 {
+    position: absolute;
+    left: 3rem;
+    top: 2.5rem;
+
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal>nav#buscadorE>input {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0.5rem 3rem 0.5rem 0;
+}
+
+#menuEscritorio>a>p {
+    font-weight: bold;
+}
+
+
+
+
+
+div#menu {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    z-index: 1;
+}
+
+div#menu>header#cabeceramenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+div#menu>header#cabeceramenu>div#menuEscritorio {
+    display: none;
+}
+
+
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#logo-compra {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    border: 1px solid grey;
+    border-right: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+
+}
+
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+    border: 1px solid grey;
+    padding: 0.25rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-right: none;
+}
+
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#home>a>img {
+    width: 30px;
+    margin: 0.31rem;
+
+}
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#cerrar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+    border: 1px solid grey;
+    padding: 0.25rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+
+div#menu>header#cabeceramenu>nav#cabecera-principalmenu>div#cerrar>img {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 44px;
+}
+
+
+
+
+div#menu>div#cuerpo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+div#menu>div#cuerpo>div#secciones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+div#menu>div#cuerpo>div#secciones>* {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*FIN MENU*/
+
+
+/*CABECERAESTA*/
+div#contenido>header#cabecera {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal>a {
+    text-decoration: none;
+}
+
+div#contenido>header#cabecera>nav#cabecera-principal>a>h1#titulo {
+    color: red;
+}
+
+div#contenido>header#cabecera>nav#buscador {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 1rem 0 1rem;
+}
+
+div#contenido>header#cabecera>nav#buscador>img#lupa {
+    position: absolute;
+    left: 2rem;
+    top: 5.6rem;
+
+}
+
+div#contenido>header#cabecera>nav#buscador>input {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+div#contenido>header#cabecera>nav#buscador>input {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+/*CABECERA*/
+ 
+
+
+
+
+/*MAIN CESTA*/
+
+
+div#contenido>main#mainCesta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+}
+
+div#contenido>main>div.camisetascompradas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+
+div#contenido>main>div.camisetascompradas>div{
+    flex-basis: 45%;
+}
+
+
+
+div#contenido>main>div.camisetascompradas>div.texto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 52%;
+        flex-basis: 52%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+
+div#contenido>main>div.camisetascompradas>div.texto>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+
+
+.izquierda {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.derecha {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.borde {
+    border: 1px solid black;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.estilohr {
+
+    margin: 0.45rem;
+    background-color: black;
+    padding: 0.1rem;
+    border: none;
+}
+
+div#contenido>main>div.camisetascompradas>div.texto>div.titulo>p {
+    font-size: 12px;
+    font-weight: bold;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    border: none;
+}
+
+div#contenido>main>div.camisetascompradas>div.texto>div>div.divhr {
+    border: 1px solid black;
+    padding: 40rem;
+}
+
+div#contenido>main>div.camisetascompradas>div.texto>div.titulo>img {
+    height: 20px;
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+div#contenido>main>div.camisetascompradas>div.texto>div>p.referencia {
+    border: none;
+    color: black;
+    font-size: 12px;
+}
+
+/*FIN CUERPO CESTA*/
+
+
+
+/*FIN MAIN CESTA*/
+
+
+/*PIE CESTA*/
+
+div#footerC {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+div#footerC>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: black;
+    color: white;
+    border-radius: 10% 10% 0 0;
+    padding: 2rem 0 2rem 0;
+}
+
+
+div#contenido>div#footerC>div>* {
+    font-weight: bold;
+    padding: 0 5rem 0 5rem;
+}
+
+div#contenido>div#footerC>div#textototal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+div#contenido>div#footerC>div#textototal>div#textototal2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+}
+
+
+div#contenido>div#footerC>div#textototal>div#textototal2>p:nth-child(1) {
+    font-size: 20px;
+}
+
+div#contenido>div#footerC>div#textototal>div#textototal2>p:nth-child(2) {
+    font-size: 10px;
+}
+
+
+div#contenido>div#footerC>div#textototal>div#precio {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    text-align: center;
+}
+
+div#contenido>div#footerC>div#textototal>div#precio>p {
+    border: 1px solid white;
+    text-align: center;
+    padding: 0.4rem 0 0.4rem 0;
+
+}
+
+
+div#contenido>div#footerC>div#textoTotal>div#textoTotal2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+}
+
+div#contenido>div#footerC>div#btn {
+    padding-top: 1.5rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+
+}
+
+div#contenido>div#footerC>div#btn>button {
+    background-color: #5CC777;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 0.7rem 1.7rem 0.7rem 1.7rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
